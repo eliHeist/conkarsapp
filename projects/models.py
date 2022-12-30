@@ -10,7 +10,7 @@ class Project(models.Model):
    short_description = models.TextField()
    long_description = models.TextField()
    images = models.ManyToManyField(Image)
-   cartegories = models.ManyToManyField("Cartegory")
+   cartegories = models.ManyToManyField("Category")
 
    def __str__(self):
       return self.name
