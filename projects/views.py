@@ -13,3 +13,7 @@ class ProjectListView(ListView):
 class ProjectDetailView(DetailView):
     model = Project
     template_name = "projects/project-detail.html"
+    context_object_name = 'project'
+
+
+# def ProjectCreateView(request):

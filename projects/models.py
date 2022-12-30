@@ -1,7 +1,5 @@
 from django.db import models
 
-from images.models import Image
-
 # Create your models here.
 class Project(models.Model):
    name = models.CharField(max_length=50)
@@ -9,8 +7,7 @@ class Project(models.Model):
    active = models.BooleanField(default=True)
    short_description = models.TextField()
    long_description = models.TextField()
-   images = models.ManyToManyField(Image)
-   cartegories = models.ManyToManyField("Category")
+   categories = models.ManyToManyField("Category", blank=True)
 
    def __str__(self):
       return self.name
