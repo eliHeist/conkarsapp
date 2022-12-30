@@ -12,3 +12,10 @@ class Image(models.Model):
    
    def image(self):
       return self.image.url
+   
+   def __str__(self):
+      return self.title or "image"
+
+   class Meta:
+      verbose_name = 'Image'
+      verbose_name_plural = 'Images'
