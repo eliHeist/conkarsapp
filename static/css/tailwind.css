@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* slideshow */
+.slide {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
