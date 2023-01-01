@@ -25,7 +25,8 @@ INSTALLED_APPS = [
 
     'home',
     'projects',
-    'images'
+    'images',
+    'services',
 ]
 
 MIDDLEWARE = [
