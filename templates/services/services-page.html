@@ -3,6 +3,67 @@
 
 
 {% block content %}
-   <h2>services</h2>
+   <main class="my-8 px-2">
+      <h1 class="text-3xl font-bold text-green-900 text-center mb-8">Our Services</h1>
+      <section class="container mx-auto">
+         <div class="grid md:grid-cols-2 gap-8">
+            <article class="bg-white grid rounded-xl shadow-md h-full hover:shadow-2xl hover:-translate-y-2 hover:-rotate-1 transition-all">
+               <img src="{% static 'temp/images (8).jpeg' %}" alt="" class="w-full aspect-video object-cover">
+               <div class="p-8">
+                  <h2 class="text-green-900 font-bold text-2xl mt-2 mb-4">Civil and Building Works</h2>
+                  <div class="text-lg">
+                     <p class="mb-8">
+                        Building and Civil Engineering construction is a complex and costly process that can challenge first-time and
+                        experienced property owners equally. Whatever the scope or nature of the project, your success depends on choosing
+                        the
+                        right contractor. The right contractor offers experience, competitive pricing, financial strength, professionalism,
+                        integrity
+                        and a commitment to your project that is supported by quality and workplace safety initiatives without fail that is
+                        what
+                        Conkaras Uganda offers.
+                     </p>
+                     <strong class="mb-2">The Company specializes in:</strong>
+                     <ol>
+                        <li>Residential developments</li>
+                        <li>Commercial developments</li>
+                        <li>Health centers</li>
+                        <li>Retail and fit outs etc.</li>
+                     </ol>
+                     <p class="mt-8">
+                        We aim to be a quality provider to our clients through inspired manpower, progressive systems, innovative content &
+                        user-friendly technology.
+                     </p>
+                  </div>
+               </div>
+            </article>
+            <article class="bg-white flex flex-col rounded-xl shadow-md h-full hover:shadow-2xl hover:-translate-y-2 hover:rotate-1 transition-all">
+               <img src="{% static 'temp/images (8).jpeg' %}" alt="" class="w-full aspect-video object-cover">
+               <div class="p-8 h-full">
+                  <h2 class="text-green-900 font-bold text-2xl mt-2 mb-4">Mechanical Works</h2>
+                  <div class="text-lg">
+                     <p class="mb-8">
+                        The works include; installation of a system of pipes and drains in a building for the distribution of potabledrinking
+                        water and the removal of waterborne wastes, and the skilled trade of working with pipes,tubingand plumbing fixturesin
+                        such systems, air conditioning installations, installation of new energy efficient systems. The company aims to improve
+                        air quality and efficiency while investing in energy management control systems.
+                     </p>
+                  </div>
+               </div>
+            </article>
+            <article class="bg-white flex flex-col rounded-xl shadow-md h-full hover:shadow-2xl hover:-translate-y-2 hover:-rotate-1 transition-all">
+               <img src="{% static 'temp/images (8).jpeg' %}" alt="" class="w-full aspect-video object-cover">
+               <div class="p-8 h-full">
+                  <h2 class="text-green-900 font-bold text-2xl mt-2 mb-4">Electrical Works</h2>
+                  <div class="text-lg">
+                     <p class="mb-8">
+                        With the pool of skilled professionals at Conkaras, we offer an exotic range of electrical services to various organizations. With an in-depth knowledge and vast experience, our professionals visit the clients place, plan and install the service accordingly. <br><br>
+                        Our services are intended to provide safe, provide various on time electrical solutions, services and consultancy including maintenance, Voltage stabilizers, Power Backups…
+                     </p>
+                  </div>
+               </div>
+            </article>
+         </div>
+      </section>
+   </main>
 {% endblock content %}
    

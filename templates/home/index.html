@@ -33,7 +33,16 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
       <div class="bg-gray-900 rounded-lg shadow-lg p-6">
         <img src="static/img/service-1.png" alt="Service 1" class="h-32 mb-4">
-        <h3 class="text-xl font-bold mb-2">Service 1</h3>
+        <h3 class="text-xl font-bold mb-2">Interior Design</h3>
+        <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nisl vel velit
+          placerat dignissim at vel diam.</p>
+        <a href="#"
+          class="inline-block px-4 py-2 font-bold text-gray-100 bg-lime-500 rounded-full hover:bg-lime-600">Learn
+          More</a>
+      </div>
+      <div class="bg-gray-900 rounded-lg shadow-lg p-6">
+        <img src="static/img/service-2.png" alt="Service 2" class="h-32 mb-4">
+        <h3 class="text-xl font-bold mb-2">Construction</h3>
         <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nisl vel velit
           placerat dignissim at vel diam.</p>
         <a href="#"
@@ -42,16 +51,7 @@
       </div>
       <div class="bg-gray-900 rounded-lg shadow-lg p-6">
         <img src="static/img/service-2.png" alt="Service 2" class="h-32 mb-4">
-        <h3 class="text-xl font-bold mb-2">Service 2</h3>
-        <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nisl vel velit
-          placerat dignissim at vel diam.</p>
-        <a href="#"
-          class="inline-block px-4 py-2 font-bold text-gray-100 bg-blue-500 rounded-full hover:bg-blue-600">Learn
-          More</a>
-      </div>
-      <div class="bg-gray-900 rounded-lg shadow-lg p-6">
-        <img src="static/img/service-2.png" alt="Service 2" class="h-32 mb-4">
-        <h3 class="text-xl font-bold mb-2">Service 2</h3>
+        <h3 class="text-xl font-bold mb-2">Remodeling</h3>
         <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nisl vel velit
           placerat dignissim at vel diam.</p>
         <a href="#"
@@ -67,8 +67,8 @@
       <div class="flex flex-wrap -mx-4">
         
         {% for p in projects %}
-          <div class="w-full sm:w-1/2 lg:w-1/3 px-4">
-            <div class="h-full  hover:shadow-lg hover:-translate-y-2 hover:scale-105 transition-all rounded-lg overflow-hidden flex flex-col">
+          <div class="w-full sm:w-1/2 lg:w-1/3 px-4 trigger">
+            <div class="h-full  hover:shado hover:-translate-y-2 hover:scale-105 transition-all rounded-lg overflow-hidden flex flex-col fly-up">
               <img src="{{ p.project.thumbnail.url }}" alt="Completed construction project" class="w-full aspect-video object-cover rounded-lg">
               <div class="py-6 grid h-full">
                 <h3 class="font-bold text-xl mb-2">{{ p.project.name }}</h3>

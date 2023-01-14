@@ -1,25 +1,18 @@
-import {gsap} from 'gsap'
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/src/ScrollTrigger';
+
+gsap.set(".fly-up", { y: 200, clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)' });
+gsap.set('.fade-in', { opacity: 0, scale: 0.9 })
 
 
-// slideshow
-const slideshow = document.querySelector('#slideshow') as HTMLDivElement;
-const slides = slideshow.querySelectorAll('.slide');
-let currentSlide = 0;
+ScrollTrigger.batch('.trigger', {
+   onEnter: (batch) => {
+      const slideElements = batch[0].querySelectorAll('.fly-up');
+      const fadeElements = batch[0].querySelectorAll('.fade-in');
 
-console.log('Heloo');
-
-
-function showSlide(n: number) {
-  slides[currentSlide].classList.remove('active');
-  slides[n].classList.add('active');
-  currentSlide = n;
-}
-
-function nextSlide() {
-  showSlide((currentSlide + 1) % slides.length);
-}
-
-const tl = gsap.timeline({ repeat: -1 });
-tl.to(slideshow, { duration: 1, x: '-100%' });
-tl.call(nextSlide);
-tl.to(slideshow, { duration: 1, x: '0%' });
+      gsap.to(slideElements, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', y: 0, stagger: 0.2, duration: 1 });
+      gsap.to(fadeElements, { opacity: 1, scale: 1, stagger: 0.2, duration: 0.5 });
+   },
+   start: '400px bottom',
+   // markers: true
+})
