@@ -712,6 +712,10 @@ video {
   height: 2rem;
 }
 
+.h-52 {
+  height: 13rem;
+}
+
 .w-full {
   width: 100%;
 }
@@ -913,6 +917,11 @@ video {
   fill: #14532d;
 }
 
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -990,6 +999,22 @@ video {
 
 .pr-12 {
   padding-right: 3rem;
+}
+
+.pr-20 {
+  padding-right: 5rem;
+}
+
+.pr-28 {
+  padding-right: 7rem;
+}
+
+.pr-40 {
+  padding-right: 10rem;
+}
+
+.pr-60 {
+  padding-right: 15rem;
 }
 
 .text-center {
@@ -1189,6 +1214,10 @@ video {
 .hover\:bg-lime-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(101 163 13 / var(--tw-bg-opacity));
+}
+
+.hover\:pl-16:hover {
+  padding-left: 4rem;
 }
 
 .hover\:text-indigo-600:hover {
