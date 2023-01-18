@@ -10,6 +10,7 @@ urlpatterns = [
     path('services/', include('services.urls', namespace='services')),
     path('contact/', include('contact.urls', namespace='contact')),
     path('about/', include('about.urls', namespace='about')),
+    path('heistadmin/', include('heistadmin.urls', namespace='heistadmin')),
 ]
 
 if settings.DEBUG:

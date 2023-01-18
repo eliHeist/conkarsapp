@@ -3,13 +3,13 @@
    <div class="container mx-auto px-4 py-2 flex items-center justify-between">
       <a href="/" class="flex"><img src="{% static 'images/logo.jpg' %}" alt="Conkaras logo" class="w-16">
       <strong class="font-bold my-auto text-4xl text-green-900">CONKARAS</strong></a>
-      <nav>
-         <ul class="hidden sm:flex items-center">
-            <li class="mr-6"><a href="/" class="text-gray-800 hover:text-indigo-600">Home</a></li>
-            <li class="mr-6"><a href="{% url 'about:main-page' %}" class="text-gray-800 hover:text-indigo-600">About</a></li>
-            <li class="mr-6"><a href="{% url 'services:main-page' %}" class="text-gray-800 hover:text-indigo-600">Services</a></li>
-            <li class="mr-6"><a href="{% url 'projects:list' %}" class="text-gray-800 hover:text-indigo-600">Projects</a></li>
-            <li class="mr-6"><a href="{% url 'contact:main-page' %}" class="text-gray-800 hover:text-indigo-600">Contact</a></li>
+      <nav class="fixed sm:relative top-0 left-0 right-0 bottom-0 z-20 bg-white">
+         <ul class="sm:flex items-center">
+            <li class="mr-6"><a href="/" class="text-gray-800 hover:text-green-600">Home</a></li>
+            <li class="mr-6"><a href="{% url 'about:main-page' %}" class="text-gray-800 hover:text-green-600">About</a></li>
+            <li class="mr-6"><a href="{% url 'services:main-page' %}" class="text-gray-800 hover:text-green-600">Services</a></li>
+            <li class="mr-6"><a href="{% url 'projects:list' %}" class="text-gray-800 hover:text-green-600">Projects</a></li>
+            <li class="mr-6"><a href="{% url 'contact:main-page' %}" class="text-gray-800 hover:text-green-600">Contact</a></li>
          </ul>
          <a href="#" class="sm:hidden fill-green-900">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-8">
