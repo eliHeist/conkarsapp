@@ -17,7 +17,7 @@ def registerModels():
    pass
 
 def defaultView(request):
-   template_name = 'heistadmin_base.html'
+   template_name = 'heistadmin/dashboard.djhtml'
    context = base_context
    for model in registered_models:
       # add model to context
@@ -28,7 +28,7 @@ def defaultView(request):
 
 
 def listView(request, slug):
-   template_name = 'heistadmin_base.html'
+   template_name = 'heistadmin/list_base.html'
    context = base_context
    
 

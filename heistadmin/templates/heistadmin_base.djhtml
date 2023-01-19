@@ -26,18 +26,17 @@
       <ul>
          <li><a href="#">Dashboard</a></li>
          
-         {% for model in models %}
-            <li><a href="#{{model}}">{{model}}</a></li>
-         {% endfor %}
+         {% block nav_menu %}
+         {% endblock nav_menu %}
             
       </ul>
    </section>
    <header id="top-bar">
       <div class="flex">
          <ol>
-            <li>Storage</li>
-            <li>Pools</li>
-            <li>Create</li>
+         {% block pagination %}
+         
+         {% endblock pagination %}
          </ol>
          <div>
             <span>Amartislab &copy; 2023</span>
