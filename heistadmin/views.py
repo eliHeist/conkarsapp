@@ -1,35 +1,72 @@
 from django.shortcuts import render
+from projects.forms import ProjectForm
 
 from projects.models import Category, Project
 
 # Create your views here.
-registered_models = {Project,Category}
-# create a base context containing slugs for registered models
-base_context = {}
-base_models = []
-for model in registered_models:
-   # insert at the end of the file to maintain order of registered_models
-   base_models.insert(-1, model.__name__)
-# add models list to context
-base_context["models"] = base_models
+class RegMod():
+   def __init__(self, model, form_class, list_display=None):
+      self.model = model
+      self.list_display = list_display # should be set to a list of the fields to display
+      self.form_class = form_class
+      
+registered_models = {
+   RegMod(
+      model=Project,
+      form_class=ProjectForm,
+      list_display={'name','short_description'}
+   )
+   # RegMod(model=Category)
+}
 
-def registerModels():
-   pass
+
+slug_context = {}
+base_models = []
+for regmodel in registered_models:
+   # insert at the end of the file to maintain order of registered_models
+   base_models.insert(-1, regmodel.model.__name__)
+   # add to slug_context
+   slug_context[f"{regmodel.model.__name__}"] = regmodel.model
+base_context = {"models": base_models}
+
+
 
 def defaultView(request):
    template_name = 'heistadmin/dashboard.djhtml'
    context = base_context
-   for model in registered_models:
+   for regmodel in registered_models:
       # add model to context
-      context[f"{model.__name__}"] = model
+      context[f"{regmodel.model.__name__}"] = regmodel.model
       # insert at the end of the file to maintain order of registered_models
 
    return render(request, template_name, context)
 
 
 def listView(request, slug):
-   template_name = 'heistadmin/list_base.html'
+   template_name = 'heistadmin/list_base.djhtml'
    context = base_context
+   for regmodel in registered_models:
+      if regmodel.model.__name__ == slug:
+         active_model = regmodel.model
+
+   context["slug"] = active_model.__name__
+   context["objects"] = active_model.objects.all()
+   
+
+   return render(request, template_name, context)
+
+
+def updateView(request, slug, pk):
+   template_name = 'heistadmin/update_base.djhtml'
+   context = base_context
+   for regmodel in registered_models:
+      if regmodel.model.__name__ == slug:
+         active_model = regmodel
+
+
+   context["slug"] = active_model.model.__name__
+   context["object"] = active_model.model.objects.get(id=pk)
+   context["form"] = active_model.form_class
    
 
    return render(request, template_name, context)

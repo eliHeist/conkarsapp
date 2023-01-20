@@ -3,6 +3,7 @@
   --color-dark-1: #222222;
   --color-dark-2: #282828;
   --color-light: #fafafa;
+  --color-accent: rgb(0, 179, 255);
   --rem-1: 1rem;
   --rem-12: 1.2rem;
   --rem-2: 2rem;
@@ -89,6 +90,31 @@ body {
 #content {
   grid-area: content;
   padding-left: var(--rem-12);
+  padding-right: var(--rem-12);
   padding-top: var(--rem-12);
   overflow-y: auto;
+}
+
+.main_content {
+  padding: var(--rem-1);
+  background-color: var(--color-dark-2);
+  border-radius: var(--rem-1);
+}
+
+table.list_table {
+  width: 100%;
+}
+table.list_table th {
+  text-align: left;
+  padding: 0.5em 0;
+  border-bottom: 2px var(--color-accent) solid;
+}
+table.list_table td {
+  padding: 0.5em 0;
+  border-bottom: 1px var(--color-dark-1) solid;
+}
+table.list_table tr {
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 4px var(--color-dark) solid;
 }/*# sourceMappingURL=main.css.map */

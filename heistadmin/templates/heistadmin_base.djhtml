@@ -21,10 +21,10 @@
             </svg>
             <span>{{ request.user }}</span>
          </h2>
-         <a href="#">website</a>
+         <a href="/">website</a>
       </header>
       <ul>
-         <li><a href="#">Dashboard</a></li>
+         <li><a href="{% url 'heistadmin:dashboard' %}">Dashboard</a></li>
          
          {% block nav_menu %}
          {% endblock nav_menu %}
@@ -35,7 +35,7 @@
       <div class="flex">
          <ol>
          {% block pagination %}
-         
+         {% comment %} paggination here {% endcomment %}
          {% endblock pagination %}
          </ol>
          <div>
@@ -44,7 +44,10 @@
          </div>
       </div>
    </header>
-   <main id="content"></main>
+   <main id="content">
+   {% block main %}
+   {% endblock main %}
+   </main>
 </body>
 
 </html>

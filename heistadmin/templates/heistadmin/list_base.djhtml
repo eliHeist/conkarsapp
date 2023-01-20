@@ -1,0 +1,32 @@
+{% extends 'heistadmin_base.djhtml' %}
+
+{% block nav_menu %}
+   {% for model in models %}
+      <li><a href="{% url 'heistadmin:list' slug=model %}">{{model}}</a></li>
+   {% endfor %}
+{% endblock nav_menu %}
+
+{% block pagination %}
+   <li><a>{{ slug }}s</a> ~ List</li>
+{% endblock pagination %}
+
+{% block main %}
+   <section class="main_content">
+      <table class="list_table">
+         <thead>
+            <th>Name</th>
+         </thead>
+         <tbody>
+            
+            {% for object in objects %}
+               <tr>
+                  <td>
+                     <a href="{% url 'heistadmin:update' slug=slug pk=object.pk %}">{{ object }}</a>
+                  </td>
+               </tr>
+            {% endfor %}
+               
+         </tbody>
+      </table>
+   </section>
+{% endblock main %}
