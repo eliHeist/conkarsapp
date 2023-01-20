@@ -23,7 +23,7 @@
          </h2>
          <a href="/">website</a>
       </header>
-      <ul>
+      <ul id="side-menu">
          <li><a href="{% url 'heistadmin:dashboard' %}">Dashboard</a></li>
          
          {% block nav_menu %}
@@ -48,6 +48,8 @@
    {% block main %}
    {% endblock main %}
    </main>
+
+   <script src="{% static 'heistadmin/js/heistadmin.js' %}"></script>
 </body>
 
 </html>

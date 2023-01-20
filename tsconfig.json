@@ -13,6 +13,6 @@
     "target": "es6",
     "moduleResolution": "node"
   },
-  "include": ["static/ts/**/*"]
+  "include": ["static/**/*"]
 }
 

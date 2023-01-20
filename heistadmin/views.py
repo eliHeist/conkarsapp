@@ -62,11 +62,17 @@ def updateView(request, slug, pk):
    for regmodel in registered_models:
       if regmodel.model.__name__ == slug:
          active_model = regmodel
+   instance = active_model.model.objects.get(id=pk)
 
+   if request.method == "POST":
+      form = active_model.form_class(request.POST, instance=instance)
+      if form.is_valid():
+         form.save()
+      instance = active_model.model.objects.get(id=pk)
 
    context["slug"] = active_model.model.__name__
-   context["object"] = active_model.model.objects.get(id=pk)
-   context["form"] = active_model.form_class
+   context["object"] = instance
+   context["form"] = active_model.form_class(instance=instance)
    
 
    return render(request, template_name, context)

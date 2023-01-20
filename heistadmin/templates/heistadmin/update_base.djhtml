@@ -13,8 +13,12 @@
 
 {% block main %}
    <section class="main_content">
-      <form action="" class="update_form heist_form">
+      <form method="POST" class="update_form heist_form">
+         {% csrf_token %}
          {{ form.as_p }}
+         <p>
+            <button type="submit">Submit</button>
+         </p>
       </form>
    </section>
 {% endblock main %}
