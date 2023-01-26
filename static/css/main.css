@@ -9,6 +9,8 @@
   --color-accent-1: rgb(67, 195, 250);
   --color-accent-light: rgb(156, 225, 255);
   --color-accent-dark: rgb(0, 85, 122);
+  --color-red: rgb(249, 31, 31);
+  --color-red-soft: rgb(249, 98, 98, 0.7);
   --rem-05: .5rem;
   --rem-1: 1rem;
   --rem-12: 1.2rem;
@@ -109,6 +111,22 @@ body {
   background-color: var(--color-dark-2);
   border-radius: var(--rem-1);
 }
+.main_content.functions {
+  margin-bottom: var(--rem-12);
+}
+.main_content.functions .options {
+  display: flex;
+  justify-content: space-between;
+}
+.main_content.functions .options .crud_options {
+  display: flex;
+  justify-content: end;
+}
+.main_content.functions .message {
+  font-weight: 500;
+  color: var(--color-accent);
+  margin-top: var(--rem-05);
+}
 
 table.list_table {
   width: 100%;
@@ -132,6 +150,15 @@ form.heist_form {
   display: grid;
   font-size: var(--rem-1);
 }
+form.heist_form .errorlist {
+  list-style: none;
+  color: var(--color-red);
+  font-weight: 700;
+  padding-top: var(--rem-05);
+}
+form.heist_form .errorlist + p input, form.heist_form .errorlist + p textarea {
+  outline: var(--color-red-soft) solid 2px;
+}
 form.heist_form p {
   display: grid;
   padding: 1rem 0;
@@ -147,6 +174,7 @@ form.heist_form p label {
 form.heist_form p input, form.heist_form p textarea {
   font-size: var(--rem-1);
   color: var(--color-light-2);
+  accent-color: var(--color-accent);
 }
 form.heist_form p input[type=text], form.heist_form p textarea {
   background-color: var(--color-dark);
@@ -206,7 +234,11 @@ form.heist_form p:has(select) .flex span:hover {
 form.heist_form p:has(select) .flex span.selected {
   background-color: var(--color-accent);
 }
-form.heist_form p:has(button[type=submit]) button[type=submit] {
+form.heist_form p:has(button[type=submit]) {
+  display: flex;
+  justify-content: space-between;
+}
+form.heist_form p:has(button[type=submit]) button {
   padding: var(--rem-05) var(--rem-1);
   background-color: var(--color-accent);
   border-radius: var(--rem-05);
@@ -214,6 +246,9 @@ form.heist_form p:has(button[type=submit]) button[type=submit] {
   font-size: var(--rem-12);
   cursor: pointer;
 }
-form.heist_form p:has(button[type=submit]) button[type=submit]:hover {
+form.heist_form p:has(button[type=submit]) button:hover {
   background-color: var(--color-accent-1);
+}
+form.heist_form p:has(button[type=submit]) button.delete {
+  background-color: var(--color-red);
 }/*# sourceMappingURL=main.css.map */

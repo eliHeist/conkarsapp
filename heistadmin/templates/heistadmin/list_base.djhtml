@@ -7,10 +7,29 @@
 {% endblock nav_menu %}
 
 {% block pagination %}
-   <li><a>{{ slug }}s</a> ~ List</li>
+   <li><a>{{ slug }}s</a></li>
 {% endblock pagination %}
 
 {% block main %}
+   <section class="main_content functions">
+      <div class="grid">
+         <div class="options">
+            <div class="title">
+               <p>Options</p>
+            </div>
+            <div class="crud_options">
+               <a href="{% url 'heistadmin:create' slug=slug %}">Create {{model}}</a>
+            </div>
+         </div>
+         <div>
+            
+            {% if prev_action_message %}
+               <p class="message">{{ prev_action_message }}</p>
+            {% endif %}
+               
+         </div>
+      </div>
+   </section>
    <section class="main_content">
       <table class="list_table">
          <thead>

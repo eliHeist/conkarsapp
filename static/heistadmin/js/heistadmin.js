@@ -10,7 +10,8 @@ imageFields = form.querySelectorAll('p:has(input[accept="image/*"])')
 selectFields = form.querySelectorAll('p:has(select)')
 
 if (imageFields) {
-   imageFields.forEach(field => {
+   if (form.classList.contains('update_form')) {
+      imageFields.forEach(field => {
       anchor = field.querySelector('a')
       image = document.createElement('img')
       image.src = anchor.href
@@ -36,6 +37,7 @@ if (imageFields) {
       
       field.querySelector('br').style.display = 'none'
    });
+   }
 
 }
 

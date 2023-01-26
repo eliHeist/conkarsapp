@@ -21,7 +21,6 @@
   
   <section id="introduction" class="bg-gray-100 py-12">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">Welcome to Conkaras</h2>
       <p class="text-gray-700 mb-6 text-center">We are a full-service construction company specializing in custom
         home building, remodeling, and commercial construction. Our team of skilled professionals is dedicated to
         delivering high-quality work and exceptional customer service.</p>
@@ -29,41 +28,50 @@
   </section>
   
   <section id="our-services" class="container mx-auto py-8 text-white">
-    <h2 class="text-3xl font-bold text-center mb-4 text-black">Our Services</h2>
+    <h2 class="text-5xl font-bold text-center mb-4 text-black">Our Services</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-2">
-      <div class="bg-gray-900 rounded-lg shadow-lg p-6">
-        <img src="static/img/service-1.png" alt="Service 1" class="h-32 mb-4">
-        <h3 class="text-xl font-bold mb-2">Interior Design</h3>
-        <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nisl vel velit
-          placerat dignissim at vel diam.</p>
-        <a href="#"
-          class="inline-block px-4 py-2 font-bold text-gray-100 bg-lime-500 rounded-full hover:bg-lime-600">Learn
-          More</a>
+      <div class="bg-green-900 rounded-lg shadow-lg">
+        <img src="{% static 'temp/images (3).jpeg' %}" alt="Service 1" class="h-48 w-full object-cover"> 
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-2 text-white">Interior Design</h3>
+          <p class="text-gray-200 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nisl vel velit
+            placerat dignissim at vel diam.</p>
+          <a href="{% url 'services:main-page' %}"
+            class="inline-block px-4 py-2 font-bold text-gray-100 bg-green-500 rounded-full hover:bg-green-600">
+            Learn More
+          </a>
+        </div>
       </div>
-      <div class="bg-gray-900 rounded-lg shadow-lg p-6">
-        <img src="static/img/service-2.png" alt="Service 2" class="h-32 mb-4">
-        <h3 class="text-xl font-bold mb-2">Construction</h3>
-        <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nisl vel velit
-          placerat dignissim at vel diam.</p>
-        <a href="#"
-          class="inline-block px-4 py-2 font-bold text-gray-100 bg-blue-500 rounded-full hover:bg-blue-600">Learn
-          More</a>
+      <div class="bg-white rounded-lg shadow-lg">
+        <img src="{% static 'temp/images (3).jpeg' %}" alt="Service 1" class="h-48 w-full object-cover"> 
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-2 text-green-900">Interior Design</h3>
+          <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nisl vel velit
+            placerat dignissim at vel diam.</p>
+          <a href="{% url 'services:main-page' %}"
+            class="inline-block px-4 py-2 font-bold text-gray-100 bg-green-500 rounded-full hover:bg-green-600">
+            Learn More
+          </a>
+        </div>
       </div>
-      <div class="bg-gray-900 rounded-lg shadow-lg p-6">
-        <img src="static/img/service-2.png" alt="Service 2" class="h-32 mb-4">
-        <h3 class="text-xl font-bold mb-2">Remodeling</h3>
-        <p class="text-gray-500 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nisl vel velit
-          placerat dignissim at vel diam.</p>
-        <a href="#"
-          class="inline-block px-4 py-2 font-bold text-gray-100 bg-blue-500 rounded-full hover:bg-blue-600">Learn
-          More</a>
+      <div class="bg-green-900 rounded-lg shadow-lg">
+        <img src="{% static 'temp/images (3).jpeg' %}" alt="Service 1" class="h-48 w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold mb-2 text-white">Interior Design</h3>
+          <p class="text-gray-200 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nisl vel velit
+            placerat dignissim at vel diam.</p>
+          <a href="{% url 'services:main-page' %}"
+            class="inline-block px-4 py-2 font-bold text-gray-100 bg-green-500 rounded-full hover:bg-green-600">
+            Learn More
+          </a>
+        </div>
       </div>
     </div>
   </section>
   
   <section id="portfolio" class="bg-gray-100 py-12">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">Our Portfolio</h2>
+      <h2 class="text-5xl font-bold mb-6 text-center">Our Portfolio</h2>
       <div class="flex flex-wrap -mx-4">
         
         {% for p in projects %}
@@ -86,7 +94,7 @@
   </section>
   <section id="testimonials" class="bg-gray-100 py-12">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold mb-6 text-center">What Our Clients Say</h2>
+      <h2 class="text-5xl font-bold mb-6 text-center">What Our Clients Say</h2>
       <div class="flex items-center justify-center mb-6">
         <div class="w-full max-w-md">
           <div class="bg-white shadow-md rounded-lg p-6">
@@ -114,5 +122,11 @@
           </div>
         </div>
       </div>
+  </section>
+  <section id="calltoaction" class=" bg-green-900 py-24">
+    <div class="grid text-center text-white">
+      <h2 class=" text-5xl font-bold mb-16">Got a project idea for us?</h2>
+      <a href="{% url 'contact:main-page' %}" class="p-4 px-6 bg-white w-fit mx-auto rounded-lg text-black text-lg transition-all hover:bg-lime-500 hover:scale-105">Contact us</a>
+    </div>
   </section>
 {% endblock content %}
