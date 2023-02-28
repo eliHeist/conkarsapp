@@ -1,0 +1,29 @@
+
+<form method="post">
+   <div class="mb-8">
+      <div class="input-group">
+         <input required name='full_name' title="full_name" type='text' class="input text-black bg-grey-200" />
+         <label class="user-label text-black" for="full_name">Name</label>
+      </div>
+   </div>
+   <div class="grid lg:grid-cols-2 gap-4">
+      <div class="input-group">
+         <input required name='email' title="email" type='email' class="input text-black bg-grey-200" />
+         <label class="user-label text-black" for="email">Email</label>
+      </div>
+      <div class="input-group">
+         <input required name='phone' title="phone" type='tel' class="input text-black bg-grey-200" />
+         <label class="user-label text-black" for="phone">Phone</label>
+      </div>
+   </div>
+   <div class="my-8">
+      <div class="input-group">
+         <textarea required name='message' title="message" type='text' class="input text-black bg-grey-200" rows="5"></textarea>
+         <label class="user-label text-black" for="message">Message</label>
+      </div>
+   </div>
+   <div class="mt-8 grid">
+      <button type="submit" class=" bg-primary-500 py-2 px-4 rounded-lg hover:contrast-150 font-semibold text-xl"><i
+            class="fas fa-send"></i>Send</button>
+   </div>
+</form>

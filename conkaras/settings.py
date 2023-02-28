@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'contact',
     'about',
     'heistadmin',
+    'team',
 ]
 
 MIDDLEWARE = [

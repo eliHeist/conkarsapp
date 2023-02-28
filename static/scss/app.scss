@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply px-4 mx-auto;
+}
+
+nav menu {
+    a {
+        &:hover {
+            color: rgb(24, 75, 9);
+        }
+    }
+}
+
+#navbar-sticky {
+    transition: all 500ms ease-in-out;
+    top: 0;
+
+    &.hide {
+        // top: -100%;
+    }
+}
+
+.service_card {
+    svg {
+        scale: .8;
+    }
+}
+
+#hamburger {
+    @apply w-auto h-auto grid;
+
+    span {
+        @apply block bg-gray-900 w-8 h-1 rounded-md;
+    }
+
+    .line_a {
+        &.in {
+            animation-name: rotatePos;
+            animation-duration: .5s;
+        }
+    }
+
+    .line_b {
+        @apply my-2;
+
+        &.in {
+            scale: 0;
+        }
+    }
+
+    .line_c {
+        &.in {
+            animation-name: rotateNeg;
+            animation-duration: .5s;
+        }
+    }
+}
+
+#navSm {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    .container {
+        translate: 0 20%;
+        opacity: 0;
+    }
+}
+
+.home-project-card {
+    @apply transition-all;
+
+    figcaption {
+        @apply py-2;
+
+        h3 {
+            @apply font-semibold pb-2 text-lg;
+        }
+
+        a {
+            @apply font-medium text-sm;
+        }
+    }
+
+    &:hover {
+        @apply -translate-y-4 shadow-sm;
+    }
+}
+
+// inputs
+/* From uiverse.io by @alexruix */
+.input-group {
+    position: relative;
+
+    .input {
+        @apply text-base p-4;
+        border-radius: 1rem;
+        transition: border 150ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        width: 100%;
+    }
+
+    .user-label {
+        @apply absolute;
+        left: 15px;
+        pointer-events: none;
+        transform: translateY(1rem);
+        transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .input:focus,
+    input:valid,
+    textarea:valid {
+        @apply border border-solid;
+        border-color: rgb(70 227 23);
+        outline: none;
+    }
+
+    .input:focus~label,
+    input:valid~label,
+    textarea:valid~label {
+        @apply text-white font-semibold;
+        background-color: rgb(70 227 23);
+        transform: translateY(-50%) scale(0.8);
+        padding: 0 0.2em;
+    }
+}
