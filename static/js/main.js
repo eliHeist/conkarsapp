@@ -49,8 +49,8 @@ window.addEventListener("scroll", () => {
 	const currentScroll = window.pageYOffset;
 	// console.log(currentScroll);
     // timeline to hide nav and hamburger
-    let tlHide = gsap.timeline({paused: true, defaults: {duration: .3, Easings: Expo.EaseOut}})
-    .to(header, {top: '-100%',})
+    let tlHide = gsap.timeline({paused: true, defaults: {duration: .2, Easings: Expo.EaseOut}})
+    .to(header, {top: '-15%',})
     if (navToggler.offsetHeight) // execute if the navToggler has a height (is visible)
         tlHide.to(navToggler, {bottom: '-4rem'})
 

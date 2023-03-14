@@ -61,7 +61,7 @@
    <section class="py-16 sm:py-20">
       <div class="container mx-auto">
          <h2 class="font-semibold text-3xl mb-6">Core values</h2>
-         <ul class="text-grey-800">
+         <ul class="text-grey-800 list-disc">
             <li>Corporate services</li>
             <li>Customer sensitivity</li>
             <li>Honesty and integrity</li>
@@ -189,11 +189,15 @@
       <div class="container mx-auto">
          <h2 class="text-3xl font-semibold mb-6">Our Team</h2>
          <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            <div class="text-center">
-               <img src="/img/passport.jpg" alt="Mr Lubega Michael" class="aspect-[3/3.5] object-cover">
-               <h3 class="font-semibold mt-2 mb-1">GENERAL MANAGER</h3>
-               <p>Mr Lubega Michael</p>
-            </div>
+            
+            {% for person in people %}
+               <div class="text-center">
+                  <img src="{{ person.image.url }}" alt="{{ person.name }}" class="aspect-[3/3.5] object-cover">
+                  <h3 class="font-bold mt-2 mb-1 uppercase">{{ person.position }}</h3>
+                  <p>{{ person.full_name }}</p>
+               </div>
+            {% endfor %}
+               
          </div>
       </div>
    </section>

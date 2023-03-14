@@ -1,5 +1,6 @@
 
 <form method="post">
+   {% csrf_token %}
    <div class="mb-8">
       <div class="input-group">
          <input required name='full_name' title="full_name" type='text' class="input text-black bg-grey-200" />

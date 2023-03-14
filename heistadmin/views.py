@@ -5,6 +5,8 @@ from projects.forms import CartegoryForm, ProjectForm
 
 from projects.models import Category, Project
 from images.models import Image
+from team.forms import PersonForm
+from team.models import Person
 
 # Create your views here.
 class RegMod():
@@ -27,8 +29,11 @@ registered_models = {
       model=Category,
       form_class=CartegoryForm,
       list_display={}
+   ),
+   RegMod(
+      model=Person,
+      form_class=PersonForm,
    )
-   # RegMod(model=Category)
 }
 
 
