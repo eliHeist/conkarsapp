@@ -1,514 +1,582 @@
-{% extends 'base.html' %}
-{% load static %}
-  
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-{% block content %}
+<!-- hero section -->
+<section class="relative h-[50vh] md:h-[70vh] lg:h-screen">
+  <!-- carousel -->
+  <div id="carouselSlides" class="h-full relative">
+    <div class="carouselSlide absolute top-0 w-full h-full">
+      <div class="relative h-full">
+        <img src="{% static 'temp/images (8).jpeg' %}" alt="background" class="object-cover w-full h-full" />
+        <div
+          class="absolute top-0 left-0 w-full h-full grid bg-gradient-to-r from-[rgba(0,0,0,0.9)] to-[rgba(0,0,0,0.1)]">
+          <div class="container content text-white grid content-center h-full">
+            <h2 class="text-6xl font-bold uppercase text-primay-500">Construction</h2>
+            <p class="my-4 bg-white bg-opacity-10 w-fit md:max-w-[50%] text- px-4 py-2">
+              Constructions that stand strong among others. <br>
+              We build for generations to come
+            </p>
+            <a href="#" class="bg-primary-500 py-2 px-4 rounded-lg text-black w-fit">View more services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carouselSlide absolute top-0 w-full h-full">
+      <div class="relative h-full">
+        <img src="{% static 'temp/images (6).jpeg' %}" alt="background" class="object-cover w-full h-full" />
+        <div
+          class="absolute top-0 left-0 w-full h-full grid bg-gradient-to-r from-[rgba(0,0,0,0.9)] to-[rgba(0,0,0,0.1)]">
+          <div class="container content text-white grid content-center h-full">
+            <h2 class="text-6xl font-bold uppercase text-primay-500">Interior Decoration</h2>
+            <p class="my-4 bg-white bg-opacity-10 w-fit md:max-w-[50%] text- px-4 py-2">
+              Bring your interior to life with quality work by our team of creative designers and decorators
+            </p>
+            <a href="#" class="bg-primary-500 py-2 px-4 rounded-lg text-black w-fit">View more services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carouselSlide absolute top-0 w-full h-full">
+      <div class="relative h-full">
+        <img src="{% static 'temp/images (5).jpeg' %}" alt="background" class="object-cover w-full h-full" />
+        <div
+          class="absolute top-0 left-0 w-full h-full grid bg-gradient-to-r from-[rgba(0,0,0,0.9)] to-[rgba(0,0,0,0.1)]">
+          <div class="container content text-white grid content-center h-full">
+            <h2 class="text-6xl font-bold uppercase text-primay-500">Electrical Work</h2>
+            <p class="my-4 bg-white bg-opacity-10 w-fit md:max-w-[50%] text- px-4 py-2">
+              We offer electrical works like light and appliance installations
+            </p>
+            <a href="#" class="bg-primary-500 py-2 px-4 rounded-lg text-black w-fit">View more services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end carousel -->
+</section>
+<!-- call to action -->
+<section class="container mx-auto bg-primary-500 text-white py-8 lg:py-16 sm:translate-y-[-10%] lg:-translate-y-1/4">
+  <div class="lg:px-12 px-6 flex md:grid md:grid-cols-3 flex-col justify-center md:justify-between">
+    <h2 class="lg:text-3xl text-3xl text-black font-semibold text-center md:text-left md:col-span-2 mb-4 lg:mb-0">
+      Looking for exquisite construction services ?
+    </h2>
+    <button class="bg-white text-black rounded-lg py-2 px-4 mx-auto h-fit md:my-auto md:mx-0 md:ml-auto hover:bg-slate-200 w-max">
+      <a href="#" class="">Contact us now</a>
+    </button>
+  </div>
+</section>
+<!-- services -->
+<section class="py-20 sm:py-0 sm:pb-20">
+  <div class="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <div class="service_card grid text-center bg-white p-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 95.777 96.188">
+        <g id="icon_-_cat" data-name="icon - cat" transform="translate(0 1.523)">
+          <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(7 44.505)" fill="none" stroke="#000"
+            stroke-width="3">
+            <circle cx="5" cy="5" r="5" stroke="none" />
+            <circle cx="5" cy="5" r="3.5" fill="none" />
+          </g>
+          <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(27 79.505)" fill="none" stroke="#000"
+            stroke-width="3">
+            <circle cx="5" cy="5" r="5" stroke="none" />
+            <circle cx="5" cy="5" r="3.5" fill="none" />
+          </g>
+          <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(78 79.505)" fill="none" stroke="#000"
+            stroke-width="3">
+            <circle cx="5" cy="5" r="5" stroke="none" />
+            <circle cx="5" cy="5" r="3.5" fill="none" />
+          </g>
+          <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(0 50.505)" fill="#46e317" stroke="#1e1e1e"
+            stroke-width="3">
+            <circle cx="12" cy="12" r="12" stroke="none" />
+            <circle cx="12" cy="12" r="10.5" fill="none" />
+          </g>
+          <path id="Path_12" data-name="Path 12" d="M314,2564.373v0Z" transform="translate(-302 -2518.495)" fill="none"
+            stroke="#000" stroke-width="3" />
+          <path id="Path_13" data-name="Path 13" d="M386.505,2570.413v16.859H337.941v-6.291l42.022-10.568Z"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_14" data-name="Path 14" d="M359.3,2575.948v-17.363h15.124v12.078"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_15" data-name="Path 15" d="M382.479,2569v-18.215H355.3l-3.523,3.775v22.4"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_16" data-name="Path 16"
+            d="M339,2578.842l-27.732-55.988s1.258-5.788,6.794-4.026c.252-.5,33.467,57.875,33.467,57.875"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_17" data-name="Path 17" d="M348.006,2587.272v5.284" transform="translate(-302 -2518.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_19" data-name="Path 19" d="M348.006,2587.272v6.911" transform="translate(-306 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_33" data-name="Path 33" d="M348.006,2587.271v62.387"
+            transform="translate(2676.209 -273.031) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_34" data-name="Path 34" d="M348.006,2587.271v62.387"
+            transform="translate(2676.209 -254.841) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_30" data-name="Path 30" d="M348.006,2587.272v6.911" transform="translate(-306 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_20" data-name="Path 20" d="M348.006,2587.272v6.911" transform="translate(-299 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_29" data-name="Path 29" d="M348.006,2587.272v6.911" transform="translate(-299 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_21" data-name="Path 21" d="M348.006,2587.272v6.911" transform="translate(-293 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_28" data-name="Path 28" d="M348.006,2587.272v6.911" transform="translate(-293 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_22" data-name="Path 22" d="M348.006,2587.272v6.911" transform="translate(-287 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_27" data-name="Path 27" d="M348.006,2587.272v6.911" transform="translate(-287 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_23" data-name="Path 23" d="M348.006,2587.272v6.911" transform="translate(-281 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_26" data-name="Path 26" d="M348.006,2587.272v6.911" transform="translate(-281 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_24" data-name="Path 24" d="M348.006,2587.272v6.911" transform="translate(-275 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_25" data-name="Path 25" d="M348.006,2587.272v6.911" transform="translate(-275 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_18" data-name="Path 18" d="M372.163,2587.272v5.536" transform="translate(-302 -2518.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_31" data-name="Path 31" d="M329.214,2593.272s-13.346,9.209,0,18.645"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_32" data-name="Path 32" d="M329.214,2593.272s-13.346,9.209,0,18.645"
+            transform="translate(417.496 2686.694) rotate(180)" fill="none" stroke="#000" stroke-width="3" />
+        </g>
+      </svg>
+      <h3 class="font-semibold mt-4 mb-3">Building Construction</h3>
+      <p class="mb-auto text-grey-900">
+        We do construction of both residential and commercial buildings
+      </p>
+    </div>
+    <div class="service_card grid text-center bg-white p-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 95.896 94.31">
+        <g id="renovation-icon" transform="translate(1.5 1.508)">
+          <path id="Path_35" data-name="Path 35"
+            d="M714.243,3629.432s.339-1.288.271-1.16c-5.828-10.648-12,0-12,0s-.2,47.783,0,47.783c-.474,2.033-4.066,2.44-4.066,2.44H689.3c-5.489,1.9-6.029,5.958-6.029,5.958v30.389h51.165"
+            transform="translate(-683.274 -3623.54)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_36" data-name="Path 36"
+            d="M702.518,3714.842v-30.389s-.539-4.061-6.029-5.958H687.34s-3.592-.406-4.066-2.44c.2,0,0-47.783,0-47.783"
+            transform="translate(-652.274 -3623.54)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_37" data-name="Path 37" d="M683.61,3689.748h49.812" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_38" data-name="Path 38" d="M690.32,3690.358v24.4" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_46" data-name="Path 46" d="M690.32,3690.358v24.4" transform="translate(-658.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_47" data-name="Path 47" d="M690.32,3690.358v24.4" transform="translate(-653.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_39" data-name="Path 39" d="M697.5,3690.358v15.181" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_40" data-name="Path 40" d="M697.5,3714.349v-5.693" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_41" data-name="Path 41" d="M702.79,3690.358v24.262" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_42" data-name="Path 42" d="M708.516,3714.756v-9.827" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_43" data-name="Path 43" d="M708.516,3700.388v-10.166" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_44" data-name="Path 44" d="M726.781,3690.358v5.083" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_45" data-name="Path 45" d="M726.781,3700.388v14.029" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_48" data-name="Path 48" d="M705.365,3630.448h6.574" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_49" data-name="Path 49" d="M714.853,3636.344h57.064s9.556,5.9,0,11.182H766.63"
+            transform="translate(-683.274 -3623.54)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_50" data-name="Path 50" d="M739.386,3647.527H714.514" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_51" data-name="Path 51" d="M721.088,3647.527v31.039" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_52" data-name="Path 52"
+            d="M772.255,3647.527v50.148a3.623,3.623,0,0,1-4.134,2.846c-.068.068-34.36,0-34.36,0"
+            transform="translate(-683.274 -3623.54)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_53" data-name="Path 53" d="M733.761,3693.4h38.223" transform="translate(-683.274 -3623.54)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_54" data-name="Path 54"
+            d="M739.386,3634.376v36.6s4.743,8.743,9.216,0c-.068,0,0-15.655,0-15.655s2.1-6.506,4.066,0c-.068.068,0,10.437,0,10.437s.2,1.9,2.643,1.626,1.83,3.592,1.83,3.592v9.488s4.812,7.522,9.556,0v-46.084H738.776"
+            transform="translate(-683.274 -3623.54)" fill="#46e317" stroke="#064623" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="3" />
+        </g>
+      </svg>
 
-  <!-- hero section -->
-  <section class="relative h-screen">
-    <img src="{% static 'images/banner-pic.jpg' %}" alt="background" class="object-cover w-full h-full">
-    <div class="absolute top-0 left-0 w-full h-full">
-  
+      <h3 class="font-semibold mt-4 mb-3">Renovations</h3>
+      <p class="mb-auto text-grey-900">
+        We also do renovations of commercial buildings, offices and
+        residential buildings
+      </p>
     </div>
-  </section>
-  <!-- call to action -->
-  <section
-    class="container mx-auto bg-primary-500 text-white py-16 sm:-translate-y-1/2">
-    <div class="px-12 flex flex-col lg:flex-row justify-between">
-      <h2 class=" text-4xl text-black font-semibold text-center lg:text-left mb-8 lg:mb-0">Looking for exquisite
-        construction services ?</h2>
-      <button class="bg-white text-black rounded-lg text-lg py-4 px-8 hover:bg-slate-200 w-max">
-        <a href="#" class="">Contact us now</a>
-      </button>
+    <div class="service_card grid text-center bg-white p-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-[88px]" viewBox="0 0 125.481 88.737">
+        <g id="Component_10_1" data-name="Component 10 – 1" transform="translate(1.5 1.5)">
+          <path id="computer"
+            d="M76.551,32a9.187,9.187,0,0,1,9.186,9.186V90.179a9.188,9.188,0,0,1-9.186,9.186H51.04l2.029,6.124h14.3a6.124,6.124,0,1,1,0,12.248H18.372a6.124,6.124,0,1,1,0-12.248h14.3L34.7,99.365H9.186A9.187,9.187,0,0,1,0,90.179V41.186A9.186,9.186,0,0,1,9.186,32Zm-64.3,12.248V87.117H73.489V44.248ZM113.3,32a9.187,9.187,0,0,1,9.186,9.186v67.365a9.188,9.188,0,0,1-9.186,9.186H101.047a9.188,9.188,0,0,1-9.186-9.186V41.186A9.187,9.187,0,0,1,101.047,32Zm-9.186,12.248a3.062,3.062,0,0,0,0,6.124h6.124a3.062,3.062,0,0,0,0-6.124Zm0,18.372h6.124a3.062,3.062,0,0,0,0-6.124h-6.124a3.062,3.062,0,0,0,0,6.124Zm3.062,39.806a6.124,6.124,0,1,0-6.124-6.124A6.117,6.117,0,0,0,107.171,102.427Z"
+            transform="translate(0 -32)" fill="none" stroke="#000" stroke-width="3" />
+          <g id="Rectangle_41" data-name="Rectangle 41" transform="translate(10.241 9.868)" fill="#46e317"
+            stroke="#1e1e1e" stroke-width="3">
+            <rect width="65" height="47" stroke="none" />
+            <rect x="1.5" y="1.5" width="62" height="44" fill="none" />
+          </g>
+        </g>
+      </svg>
+
+      <h3 class="font-semibold mt-4 mb-3">Computer Aided Design</h3>
+      <p class="mb-auto text-grey-900">
+        We do computer aided designs to visualize our projects before we
+        begin actual work
+      </p>
     </div>
-  </section>
-  <!-- services -->
-  <section class="py-20 sm:py-0 sm:pb-20">
-    <div class="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      <div class="service_card grid text-center bg-white p-8">
-        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 95.777 96.188">
-          <g id="icon_-_cat" data-name="icon - cat" transform="translate(0 1.523)">
-            <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(7 44.505)" fill="none" stroke="#000"
-              stroke-width="3">
-              <circle cx="5" cy="5" r="5" stroke="none" />
-              <circle cx="5" cy="5" r="3.5" fill="none" />
-            </g>
-            <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(27 79.505)" fill="none" stroke="#000"
-              stroke-width="3">
-              <circle cx="5" cy="5" r="5" stroke="none" />
-              <circle cx="5" cy="5" r="3.5" fill="none" />
-            </g>
-            <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(78 79.505)" fill="none" stroke="#000"
-              stroke-width="3">
-              <circle cx="5" cy="5" r="5" stroke="none" />
-              <circle cx="5" cy="5" r="3.5" fill="none" />
-            </g>
-            <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(0 50.505)" fill="#46e317" stroke="#1e1e1e"
-              stroke-width="3">
-              <circle cx="12" cy="12" r="12" stroke="none" />
-              <circle cx="12" cy="12" r="10.5" fill="none" />
-            </g>
-            <path id="Path_12" data-name="Path 12" d="M314,2564.373v0Z" transform="translate(-302 -2518.495)" fill="none"
-              stroke="#000" stroke-width="3" />
-            <path id="Path_13" data-name="Path 13" d="M386.505,2570.413v16.859H337.941v-6.291l42.022-10.568Z"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_14" data-name="Path 14" d="M359.3,2575.948v-17.363h15.124v12.078"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_15" data-name="Path 15" d="M382.479,2569v-18.215H355.3l-3.523,3.775v22.4"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_16" data-name="Path 16"
-              d="M339,2578.842l-27.732-55.988s1.258-5.788,6.794-4.026c.252-.5,33.467,57.875,33.467,57.875"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_17" data-name="Path 17" d="M348.006,2587.272v5.284" transform="translate(-302 -2518.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_19" data-name="Path 19" d="M348.006,2587.272v6.911" transform="translate(-306 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_33" data-name="Path 33" d="M348.006,2587.271v62.387"
-              transform="translate(2676.209 -273.031) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_34" data-name="Path 34" d="M348.006,2587.271v62.387"
-              transform="translate(2676.209 -254.841) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_30" data-name="Path 30" d="M348.006,2587.272v6.911" transform="translate(-306 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_20" data-name="Path 20" d="M348.006,2587.272v6.911" transform="translate(-299 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_29" data-name="Path 29" d="M348.006,2587.272v6.911" transform="translate(-299 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_21" data-name="Path 21" d="M348.006,2587.272v6.911" transform="translate(-293 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_28" data-name="Path 28" d="M348.006,2587.272v6.911" transform="translate(-293 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_22" data-name="Path 22" d="M348.006,2587.272v6.911" transform="translate(-287 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_27" data-name="Path 27" d="M348.006,2587.272v6.911" transform="translate(-287 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_23" data-name="Path 23" d="M348.006,2587.272v6.911" transform="translate(-281 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_26" data-name="Path 26" d="M348.006,2587.272v6.911" transform="translate(-281 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_24" data-name="Path 24" d="M348.006,2587.272v6.911" transform="translate(-275 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_25" data-name="Path 25" d="M348.006,2587.272v6.911" transform="translate(-275 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_18" data-name="Path 18" d="M372.163,2587.272v5.536" transform="translate(-302 -2518.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_31" data-name="Path 31" d="M329.214,2593.272s-13.346,9.209,0,18.645"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_32" data-name="Path 32" d="M329.214,2593.272s-13.346,9.209,0,18.645"
-              transform="translate(417.496 2686.694) rotate(180)" fill="none" stroke="#000" stroke-width="3" />
+    <div class="service_card grid text-center bg-white p-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 95.777 96.188">
+        <g id="icon_-_cat" data-name="icon - cat" transform="translate(0 1.523)">
+          <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(7 44.505)" fill="none" stroke="#000"
+            stroke-width="3">
+            <circle cx="5" cy="5" r="5" stroke="none" />
+            <circle cx="5" cy="5" r="3.5" fill="none" />
           </g>
-        </svg>
-        <h3 class="font-semibold mt-4 mb-3">Building Construction </h3>
-        <p class="mb-auto text-grey-900">We do construction of both residential and commercial buildings</p>
-      </div>
-      <div class="service_card grid text-center bg-white p-8">
-        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 95.896 94.31">
-          <g id="renovation-icon" transform="translate(1.5 1.508)">
-            <path id="Path_35" data-name="Path 35"
-              d="M714.243,3629.432s.339-1.288.271-1.16c-5.828-10.648-12,0-12,0s-.2,47.783,0,47.783c-.474,2.033-4.066,2.44-4.066,2.44H689.3c-5.489,1.9-6.029,5.958-6.029,5.958v30.389h51.165"
-              transform="translate(-683.274 -3623.54)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_36" data-name="Path 36"
-              d="M702.518,3714.842v-30.389s-.539-4.061-6.029-5.958H687.34s-3.592-.406-4.066-2.44c.2,0,0-47.783,0-47.783"
-              transform="translate(-652.274 -3623.54)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_37" data-name="Path 37" d="M683.61,3689.748h49.812" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_38" data-name="Path 38" d="M690.32,3690.358v24.4" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_46" data-name="Path 46" d="M690.32,3690.358v24.4" transform="translate(-658.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_47" data-name="Path 47" d="M690.32,3690.358v24.4" transform="translate(-653.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_39" data-name="Path 39" d="M697.5,3690.358v15.181" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_40" data-name="Path 40" d="M697.5,3714.349v-5.693" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_41" data-name="Path 41" d="M702.79,3690.358v24.262" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_42" data-name="Path 42" d="M708.516,3714.756v-9.827" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_43" data-name="Path 43" d="M708.516,3700.388v-10.166" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_44" data-name="Path 44" d="M726.781,3690.358v5.083" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_45" data-name="Path 45" d="M726.781,3700.388v14.029" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_48" data-name="Path 48" d="M705.365,3630.448h6.574" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_49" data-name="Path 49" d="M714.853,3636.344h57.064s9.556,5.9,0,11.182H766.63"
-              transform="translate(-683.274 -3623.54)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_50" data-name="Path 50" d="M739.386,3647.527H714.514" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_51" data-name="Path 51" d="M721.088,3647.527v31.039" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_52" data-name="Path 52"
-              d="M772.255,3647.527v50.148a3.623,3.623,0,0,1-4.134,2.846c-.068.068-34.36,0-34.36,0"
-              transform="translate(-683.274 -3623.54)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_53" data-name="Path 53" d="M733.761,3693.4h38.223" transform="translate(-683.274 -3623.54)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_54" data-name="Path 54"
-              d="M739.386,3634.376v36.6s4.743,8.743,9.216,0c-.068,0,0-15.655,0-15.655s2.1-6.506,4.066,0c-.068.068,0,10.437,0,10.437s.2,1.9,2.643,1.626,1.83,3.592,1.83,3.592v9.488s4.812,7.522,9.556,0v-46.084H738.776"
-              transform="translate(-683.274 -3623.54)" fill="#46e317" stroke="#064623" stroke-linecap="round"
-              stroke-linejoin="round" stroke-width="3" />
+          <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(27 79.505)" fill="none" stroke="#000"
+            stroke-width="3">
+            <circle cx="5" cy="5" r="5" stroke="none" />
+            <circle cx="5" cy="5" r="3.5" fill="none" />
           </g>
-        </svg>
-  
-        <h3 class="font-semibold mt-4 mb-3">Renovations</h3>
-        <p class="mb-auto text-grey-900">We also do renovations of commercial buildings, offices and residential buildings
-        </p>
-      </div>
-      <div class="service_card grid text-center bg-white p-8">
-        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-[88px]" viewBox="0 0 125.481 88.737">
-          <g id="Component_10_1" data-name="Component 10 – 1" transform="translate(1.5 1.5)">
-            <path id="computer"
-              d="M76.551,32a9.187,9.187,0,0,1,9.186,9.186V90.179a9.188,9.188,0,0,1-9.186,9.186H51.04l2.029,6.124h14.3a6.124,6.124,0,1,1,0,12.248H18.372a6.124,6.124,0,1,1,0-12.248h14.3L34.7,99.365H9.186A9.187,9.187,0,0,1,0,90.179V41.186A9.186,9.186,0,0,1,9.186,32Zm-64.3,12.248V87.117H73.489V44.248ZM113.3,32a9.187,9.187,0,0,1,9.186,9.186v67.365a9.188,9.188,0,0,1-9.186,9.186H101.047a9.188,9.188,0,0,1-9.186-9.186V41.186A9.187,9.187,0,0,1,101.047,32Zm-9.186,12.248a3.062,3.062,0,0,0,0,6.124h6.124a3.062,3.062,0,0,0,0-6.124Zm0,18.372h6.124a3.062,3.062,0,0,0,0-6.124h-6.124a3.062,3.062,0,0,0,0,6.124Zm3.062,39.806a6.124,6.124,0,1,0-6.124-6.124A6.117,6.117,0,0,0,107.171,102.427Z"
-              transform="translate(0 -32)" fill="none" stroke="#000" stroke-width="3" />
-            <g id="Rectangle_41" data-name="Rectangle 41" transform="translate(10.241 9.868)" fill="#46e317"
-              stroke="#1e1e1e" stroke-width="3">
-              <rect width="65" height="47" stroke="none" />
-              <rect x="1.5" y="1.5" width="62" height="44" fill="none" />
-            </g>
+          <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(78 79.505)" fill="none" stroke="#000"
+            stroke-width="3">
+            <circle cx="5" cy="5" r="5" stroke="none" />
+            <circle cx="5" cy="5" r="3.5" fill="none" />
           </g>
-        </svg>
-  
-        <h3 class="font-semibold mt-4 mb-3">Computer Aided Design</h3>
-        <p class="mb-auto text-grey-900">We do computer aided designs to visualize our projects before we begin actual
-          work</p>
-      </div>
-      <div class="service_card grid text-center bg-white p-8">
-        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 95.777 96.188">
-          <g id="icon_-_cat" data-name="icon - cat" transform="translate(0 1.523)">
-            <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(7 44.505)" fill="none" stroke="#000"
-              stroke-width="3">
-              <circle cx="5" cy="5" r="5" stroke="none" />
-              <circle cx="5" cy="5" r="3.5" fill="none" />
-            </g>
-            <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(27 79.505)" fill="none" stroke="#000"
-              stroke-width="3">
-              <circle cx="5" cy="5" r="5" stroke="none" />
-              <circle cx="5" cy="5" r="3.5" fill="none" />
-            </g>
-            <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(78 79.505)" fill="none" stroke="#000"
-              stroke-width="3">
-              <circle cx="5" cy="5" r="5" stroke="none" />
-              <circle cx="5" cy="5" r="3.5" fill="none" />
-            </g>
-            <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(0 50.505)" fill="#46e317" stroke="#1e1e1e"
-              stroke-width="3">
-              <circle cx="12" cy="12" r="12" stroke="none" />
-              <circle cx="12" cy="12" r="10.5" fill="none" />
-            </g>
-            <path id="Path_12" data-name="Path 12" d="M314,2564.373v0Z" transform="translate(-302 -2518.495)" fill="none"
-              stroke="#000" stroke-width="3" />
-            <path id="Path_13" data-name="Path 13" d="M386.505,2570.413v16.859H337.941v-6.291l42.022-10.568Z"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_14" data-name="Path 14" d="M359.3,2575.948v-17.363h15.124v12.078"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_15" data-name="Path 15" d="M382.479,2569v-18.215H355.3l-3.523,3.775v22.4"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_16" data-name="Path 16"
-              d="M339,2578.842l-27.732-55.988s1.258-5.788,6.794-4.026c.252-.5,33.467,57.875,33.467,57.875"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_17" data-name="Path 17" d="M348.006,2587.272v5.284" transform="translate(-302 -2518.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_19" data-name="Path 19" d="M348.006,2587.272v6.911" transform="translate(-306 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_33" data-name="Path 33" d="M348.006,2587.271v62.387"
-              transform="translate(2676.209 -273.031) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_34" data-name="Path 34" d="M348.006,2587.271v62.387"
-              transform="translate(2676.209 -254.841) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_30" data-name="Path 30" d="M348.006,2587.272v6.911" transform="translate(-306 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_20" data-name="Path 20" d="M348.006,2587.272v6.911" transform="translate(-299 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_29" data-name="Path 29" d="M348.006,2587.272v6.911" transform="translate(-299 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_21" data-name="Path 21" d="M348.006,2587.272v6.911" transform="translate(-293 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_28" data-name="Path 28" d="M348.006,2587.272v6.911" transform="translate(-293 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_22" data-name="Path 22" d="M348.006,2587.272v6.911" transform="translate(-287 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_27" data-name="Path 27" d="M348.006,2587.272v6.911" transform="translate(-287 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_23" data-name="Path 23" d="M348.006,2587.272v6.911" transform="translate(-281 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_26" data-name="Path 26" d="M348.006,2587.272v6.911" transform="translate(-281 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_24" data-name="Path 24" d="M348.006,2587.272v6.911" transform="translate(-275 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_25" data-name="Path 25" d="M348.006,2587.272v6.911" transform="translate(-275 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_18" data-name="Path 18" d="M372.163,2587.272v5.536" transform="translate(-302 -2518.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_31" data-name="Path 31" d="M329.214,2593.272s-13.346,9.209,0,18.645"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_32" data-name="Path 32" d="M329.214,2593.272s-13.346,9.209,0,18.645"
-              transform="translate(417.496 2686.694) rotate(180)" fill="none" stroke="#000" stroke-width="3" />
+          <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(0 50.505)" fill="#46e317" stroke="#1e1e1e"
+            stroke-width="3">
+            <circle cx="12" cy="12" r="12" stroke="none" />
+            <circle cx="12" cy="12" r="10.5" fill="none" />
           </g>
-        </svg>
-        <h3 class="font-semibold mt-4 mb-3">Interior Design</h3>
-        <p class="mb-auto text-grey-900">We are excellent at interior design of offices, health centers and residential
-          homes</p>
-      </div>
-      <div class="service_card grid text-center bg-white p-8">
-        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 108.829 97.07">
-          <g id="electrical_icon" transform="translate(1.5 1.5)">
-            <path id="Path_74" data-name="Path 74"
-              d="M358.28,2138.166l18.586-13.828.931,1.069-7.172,12.517,9.862.241v1.035l-18.448,13.517-1.1-.793,7.138-12.724h-9.966Z"
-              transform="translate(-290.002 -2071)" fill="#46e317" stroke="#46e317" stroke-width="1" />
-            <path id="plug-circle-bolt"
-              d="M17.638,0a5.877,5.877,0,0,1,5.879,5.879V23.517H11.759V5.879A5.88,5.88,0,0,1,17.638,0ZM52.914,0a5.877,5.877,0,0,1,5.879,5.879V23.517H47.035V5.879A5.877,5.877,0,0,1,52.914,0ZM64.673,29.4a5.873,5.873,0,0,1,5.879,5.879,7.026,7.026,0,0,1-.129,1.249A32.224,32.224,0,0,0,47.035,67.613a33.532,33.532,0,0,0,.57,6.118,29.153,29.153,0,0,1-6.449,2.113V94.07H29.4V75.844A29.541,29.541,0,0,1,5.879,47.035V41.156a5.879,5.879,0,0,1,0-11.759ZM52.914,67.613A26.457,26.457,0,1,1,79.371,94.07,26.464,26.464,0,0,1,52.914,67.613ZM85.4,52.62,67.76,65.849a2,2,0,0,0-.772,2.462,2.2,2.2,0,0,0,2.095,1.507h6.541l-5.53,9.958a2.192,2.192,0,0,0,.478,2.719,2.436,2.436,0,0,0,2.774.11L90.983,69.376a2.226,2.226,0,0,0,.772-2.462,2.2,2.2,0,0,0-2.095-1.507H83.12l5.53-9.958a2.467,2.467,0,0,0-.478-2.885,2.436,2.436,0,0,0-2.774.055Z"
-              fill="none" stroke="#1e1e1e" stroke-width="3" />
-          </g>
-        </svg>
-  
-        <h3 class="font-semibold mt-4 mb-3">Electrical Works</h3>
-        <p class="mb-auto text-grey-900">We diligently provide various on time electrical solutions</p>
-      </div>
-      <!-- class="mx-auto h-24" -->
-      <div class="service_card grid text-center bg-white p-8">
-        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 98.873 98.843">
-          <g id="mechanical_works_icon" transform="translate(2.652 2.637)">
-            <path id="Path_71" data-name="Path 71"
-              d="M299.5,2083.792l11.458-10.71L333,2089.895l1.245,11.333,19.3,19.926,8.842-1.245,6.476,4.11,23.289,23.04-.5,6.6-12.7,12.329-6.974-1.619-25.53-27.149.747-11.208-19.553-19.677H315.94Z"
-              transform="translate(-298.893 -2072.103)" fill="#46e317" stroke="#46e317" stroke-width="1" />
-            <path id="screwdriver-wrench"
-              d="M61.049,41.232a19.348,19.348,0,0,1,13.774,5.7l3.6,3.6A26.409,26.409,0,0,0,93.445,32.752a26.819,26.819,0,0,0,.04-12.585,2.672,2.672,0,0,0-4.478-1.215L76.329,31.629H62.419V17.883L75.1,5.206A2.672,2.672,0,0,0,73.881.727,26.82,26.82,0,0,0,61.3.767,26.448,26.448,0,0,0,41.572,22.184a24.3,24.3,0,0,0-.3,4.494L56.5,41.924A14.009,14.009,0,0,1,61.049,41.232Zm9.6,10.028A13.652,13.652,0,0,0,54.943,48.7L35.161,29.07V17.66L11.776,0,0,11.609,17.663,34.995H29.079L48.711,54.61A13.652,13.652,0,0,0,51.27,70.321L72.8,91.867a6.876,6.876,0,0,0,9.7,0L92.2,82.161a6.876,6.876,0,0,0,0-9.7ZM41.932,56.485,31.04,45.611l-27.4,27.4A12.415,12.415,0,1,0,21.2,90.565L43.114,68.651A19.542,19.542,0,0,1,41.932,56.485ZM11.776,86.844a4.416,4.416,0,1,1,4.416-4.416A4.417,4.417,0,0,1,11.776,86.844Z"
-              transform="translate(0 0.001)" fill="none" stroke="#000" stroke-width="3" />
-          </g>
-        </svg>
-  
-        <h3 class="font-semibold mt-4 mb-3">Mechanical Works</h3>
-        <p class="mb-auto text-grey-900">Installation of various appliances like air conditioners</p>
-      </div>
-      <div class="service_card grid text-center bg-white p-8">
-        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 95.777 96.188">
-          <g id="icon_-_cat" data-name="icon - cat" transform="translate(0 1.523)">
-            <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(7 44.505)" fill="none" stroke="#000"
-              stroke-width="3">
-              <circle cx="5" cy="5" r="5" stroke="none" />
-              <circle cx="5" cy="5" r="3.5" fill="none" />
-            </g>
-            <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(27 79.505)" fill="none" stroke="#000"
-              stroke-width="3">
-              <circle cx="5" cy="5" r="5" stroke="none" />
-              <circle cx="5" cy="5" r="3.5" fill="none" />
-            </g>
-            <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(78 79.505)" fill="none" stroke="#000"
-              stroke-width="3">
-              <circle cx="5" cy="5" r="5" stroke="none" />
-              <circle cx="5" cy="5" r="3.5" fill="none" />
-            </g>
-            <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(0 50.505)" fill="#46e317" stroke="#1e1e1e"
-              stroke-width="3">
-              <circle cx="12" cy="12" r="12" stroke="none" />
-              <circle cx="12" cy="12" r="10.5" fill="none" />
-            </g>
-            <path id="Path_12" data-name="Path 12" d="M314,2564.373v0Z" transform="translate(-302 -2518.495)" fill="none"
-              stroke="#000" stroke-width="3" />
-            <path id="Path_13" data-name="Path 13" d="M386.505,2570.413v16.859H337.941v-6.291l42.022-10.568Z"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_14" data-name="Path 14" d="M359.3,2575.948v-17.363h15.124v12.078"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_15" data-name="Path 15" d="M382.479,2569v-18.215H355.3l-3.523,3.775v22.4"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_16" data-name="Path 16"
-              d="M339,2578.842l-27.732-55.988s1.258-5.788,6.794-4.026c.252-.5,33.467,57.875,33.467,57.875"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_17" data-name="Path 17" d="M348.006,2587.272v5.284" transform="translate(-302 -2518.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_19" data-name="Path 19" d="M348.006,2587.272v6.911" transform="translate(-306 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_33" data-name="Path 33" d="M348.006,2587.271v62.387"
-              transform="translate(2676.209 -273.031) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_34" data-name="Path 34" d="M348.006,2587.271v62.387"
-              transform="translate(2676.209 -254.841) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_30" data-name="Path 30" d="M348.006,2587.272v6.911" transform="translate(-306 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_20" data-name="Path 20" d="M348.006,2587.272v6.911" transform="translate(-299 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_29" data-name="Path 29" d="M348.006,2587.272v6.911" transform="translate(-299 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_21" data-name="Path 21" d="M348.006,2587.272v6.911" transform="translate(-293 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_28" data-name="Path 28" d="M348.006,2587.272v6.911" transform="translate(-293 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_22" data-name="Path 22" d="M348.006,2587.272v6.911" transform="translate(-287 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_27" data-name="Path 27" d="M348.006,2587.272v6.911" transform="translate(-287 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_23" data-name="Path 23" d="M348.006,2587.272v6.911" transform="translate(-281 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_26" data-name="Path 26" d="M348.006,2587.272v6.911" transform="translate(-281 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_24" data-name="Path 24" d="M348.006,2587.272v6.911" transform="translate(-275 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_25" data-name="Path 25" d="M348.006,2587.272v6.911" transform="translate(-275 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_18" data-name="Path 18" d="M372.163,2587.272v5.536" transform="translate(-302 -2518.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_31" data-name="Path 31" d="M329.214,2593.272s-13.346,9.209,0,18.645"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_32" data-name="Path 32" d="M329.214,2593.272s-13.346,9.209,0,18.645"
-              transform="translate(417.496 2686.694) rotate(180)" fill="none" stroke="#000" stroke-width="3" />
-          </g>
-        </svg>
-        <h3 class="font-semibold mt-4 mb-3">Flooring and Roofing</h3>
-        <p class="mb-auto text-grey-900">We do construction of both residential and commercial buildings</p>
-      </div>
-      <div class="service_card grid text-center bg-white p-8">
-        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 95.777 96.188">
-          <g id="icon_-_cat" data-name="icon - cat" transform="translate(0 1.523)">
-            <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(7 44.505)" fill="none" stroke="#000"
-              stroke-width="3">
-              <circle cx="5" cy="5" r="5" stroke="none" />
-              <circle cx="5" cy="5" r="3.5" fill="none" />
-            </g>
-            <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(27 79.505)" fill="none" stroke="#000"
-              stroke-width="3">
-              <circle cx="5" cy="5" r="5" stroke="none" />
-              <circle cx="5" cy="5" r="3.5" fill="none" />
-            </g>
-            <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(78 79.505)" fill="none" stroke="#000"
-              stroke-width="3">
-              <circle cx="5" cy="5" r="5" stroke="none" />
-              <circle cx="5" cy="5" r="3.5" fill="none" />
-            </g>
-            <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(0 50.505)" fill="#46e317" stroke="#1e1e1e"
-              stroke-width="3">
-              <circle cx="12" cy="12" r="12" stroke="none" />
-              <circle cx="12" cy="12" r="10.5" fill="none" />
-            </g>
-            <path id="Path_12" data-name="Path 12" d="M314,2564.373v0Z" transform="translate(-302 -2518.495)" fill="none"
-              stroke="#000" stroke-width="3" />
-            <path id="Path_13" data-name="Path 13" d="M386.505,2570.413v16.859H337.941v-6.291l42.022-10.568Z"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_14" data-name="Path 14" d="M359.3,2575.948v-17.363h15.124v12.078"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_15" data-name="Path 15" d="M382.479,2569v-18.215H355.3l-3.523,3.775v22.4"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_16" data-name="Path 16"
-              d="M339,2578.842l-27.732-55.988s1.258-5.788,6.794-4.026c.252-.5,33.467,57.875,33.467,57.875"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_17" data-name="Path 17" d="M348.006,2587.272v5.284" transform="translate(-302 -2518.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_19" data-name="Path 19" d="M348.006,2587.272v6.911" transform="translate(-306 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_33" data-name="Path 33" d="M348.006,2587.271v62.387"
-              transform="translate(2676.209 -273.031) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_34" data-name="Path 34" d="M348.006,2587.271v62.387"
-              transform="translate(2676.209 -254.841) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_30" data-name="Path 30" d="M348.006,2587.272v6.911" transform="translate(-306 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_20" data-name="Path 20" d="M348.006,2587.272v6.911" transform="translate(-299 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_29" data-name="Path 29" d="M348.006,2587.272v6.911" transform="translate(-299 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_21" data-name="Path 21" d="M348.006,2587.272v6.911" transform="translate(-293 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_28" data-name="Path 28" d="M348.006,2587.272v6.911" transform="translate(-293 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_22" data-name="Path 22" d="M348.006,2587.272v6.911" transform="translate(-287 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_27" data-name="Path 27" d="M348.006,2587.272v6.911" transform="translate(-287 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_23" data-name="Path 23" d="M348.006,2587.272v6.911" transform="translate(-281 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_26" data-name="Path 26" d="M348.006,2587.272v6.911" transform="translate(-281 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_24" data-name="Path 24" d="M348.006,2587.272v6.911" transform="translate(-275 -2512.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_25" data-name="Path 25" d="M348.006,2587.272v6.911" transform="translate(-275 -2501.222)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_18" data-name="Path 18" d="M372.163,2587.272v5.536" transform="translate(-302 -2518.495)"
-              fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_31" data-name="Path 31" d="M329.214,2593.272s-13.346,9.209,0,18.645"
-              transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
-            <path id="Path_32" data-name="Path 32" d="M329.214,2593.272s-13.346,9.209,0,18.645"
-              transform="translate(417.496 2686.694) rotate(180)" fill="none" stroke="#000" stroke-width="3" />
-          </g>
-        </svg>
-        <h3 class="font-semibold mt-4 mb-3">Plumbing</h3>
-        <p class="mb-auto text-grey-900">We do plumbing: fitting pipes and all water related appliances</p>
-      </div>
+          <path id="Path_12" data-name="Path 12" d="M314,2564.373v0Z" transform="translate(-302 -2518.495)" fill="none"
+            stroke="#000" stroke-width="3" />
+          <path id="Path_13" data-name="Path 13" d="M386.505,2570.413v16.859H337.941v-6.291l42.022-10.568Z"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_14" data-name="Path 14" d="M359.3,2575.948v-17.363h15.124v12.078"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_15" data-name="Path 15" d="M382.479,2569v-18.215H355.3l-3.523,3.775v22.4"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_16" data-name="Path 16"
+            d="M339,2578.842l-27.732-55.988s1.258-5.788,6.794-4.026c.252-.5,33.467,57.875,33.467,57.875"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_17" data-name="Path 17" d="M348.006,2587.272v5.284" transform="translate(-302 -2518.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_19" data-name="Path 19" d="M348.006,2587.272v6.911" transform="translate(-306 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_33" data-name="Path 33" d="M348.006,2587.271v62.387"
+            transform="translate(2676.209 -273.031) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_34" data-name="Path 34" d="M348.006,2587.271v62.387"
+            transform="translate(2676.209 -254.841) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_30" data-name="Path 30" d="M348.006,2587.272v6.911" transform="translate(-306 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_20" data-name="Path 20" d="M348.006,2587.272v6.911" transform="translate(-299 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_29" data-name="Path 29" d="M348.006,2587.272v6.911" transform="translate(-299 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_21" data-name="Path 21" d="M348.006,2587.272v6.911" transform="translate(-293 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_28" data-name="Path 28" d="M348.006,2587.272v6.911" transform="translate(-293 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_22" data-name="Path 22" d="M348.006,2587.272v6.911" transform="translate(-287 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_27" data-name="Path 27" d="M348.006,2587.272v6.911" transform="translate(-287 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_23" data-name="Path 23" d="M348.006,2587.272v6.911" transform="translate(-281 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_26" data-name="Path 26" d="M348.006,2587.272v6.911" transform="translate(-281 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_24" data-name="Path 24" d="M348.006,2587.272v6.911" transform="translate(-275 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_25" data-name="Path 25" d="M348.006,2587.272v6.911" transform="translate(-275 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_18" data-name="Path 18" d="M372.163,2587.272v5.536" transform="translate(-302 -2518.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_31" data-name="Path 31" d="M329.214,2593.272s-13.346,9.209,0,18.645"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_32" data-name="Path 32" d="M329.214,2593.272s-13.346,9.209,0,18.645"
+            transform="translate(417.496 2686.694) rotate(180)" fill="none" stroke="#000" stroke-width="3" />
+        </g>
+      </svg>
+      <h3 class="font-semibold mt-4 mb-3">Interior Design</h3>
+      <p class="mb-auto text-grey-900">
+        We are excellent at interior design of offices, health centers
+        and residential homes
+      </p>
     </div>
-  </section>
-  <!-- why us -->
-  <section class="">
-    <div class="container mx-auto flex flex-col-reverse sm:flex-row gap-8">
-      <div class="grid flex-1">
-        <h2 class="text-3xl font-semibold">Why choose us for your next project !</h2>
-        <p class="text-grey-600">Bring to the table win-win strategies to ensure proactive domination. At the end of the
-          day, going forward, a new normal that has evolved from generation X is on the runway.</p>
-        <ul>
-          <li class="flex gap-4 my-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class=" h-5" viewBox="0 0 24.935 17.81">
-              <path id="check"
-                d="M24.413,96.533a1.777,1.777,0,0,1,0,2.516L10.164,113.3a1.777,1.777,0,0,1-2.516,0L.522,106.173a1.78,1.78,0,1,1,2.519-2.516l5.815,5.861L21.9,96.533a1.775,1.775,0,0,1,2.516,0Z"
-                transform="translate(0 -96.01)" fill="#46e317" />
-            </svg>
-            <span>Expert and professional engineers</span>
-          </li>
-          <li class="flex gap-4 my-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class=" h-5" viewBox="0 0 24.935 17.81">
-              <path id="check"
-                d="M24.413,96.533a1.777,1.777,0,0,1,0,2.516L10.164,113.3a1.777,1.777,0,0,1-2.516,0L.522,106.173a1.78,1.78,0,1,1,2.519-2.516l5.815,5.861L21.9,96.533a1.775,1.775,0,0,1,2.516,0Z"
-                transform="translate(0 -96.01)" fill="#46e317" />
-            </svg>
-            <span>15+ year experience</span>
-          </li>
-          <li class="flex gap-4 my-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class=" h-5" viewBox="0 0 24.935 17.81">
-              <path id="check"
-                d="M24.413,96.533a1.777,1.777,0,0,1,0,2.516L10.164,113.3a1.777,1.777,0,0,1-2.516,0L.522,106.173a1.78,1.78,0,1,1,2.519-2.516l5.815,5.861L21.9,96.533a1.775,1.775,0,0,1,2.516,0Z"
-                transform="translate(0 -96.01)" fill="#46e317" />
-            </svg>
-            <span>Fully satisfaction guarantee</span>
-          </li>
-        </ul>
-      </div>
-      <figure class="flex-1">
-        <img src="{% static 'images/home-about.jpg' %}" alt="about us" class="h-full object-cover">
+    <div class="service_card grid text-center bg-white p-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 108.829 97.07">
+        <g id="electrical_icon" transform="translate(1.5 1.5)">
+          <path id="Path_74" data-name="Path 74"
+            d="M358.28,2138.166l18.586-13.828.931,1.069-7.172,12.517,9.862.241v1.035l-18.448,13.517-1.1-.793,7.138-12.724h-9.966Z"
+            transform="translate(-290.002 -2071)" fill="#46e317" stroke="#46e317" stroke-width="1" />
+          <path id="plug-circle-bolt"
+            d="M17.638,0a5.877,5.877,0,0,1,5.879,5.879V23.517H11.759V5.879A5.88,5.88,0,0,1,17.638,0ZM52.914,0a5.877,5.877,0,0,1,5.879,5.879V23.517H47.035V5.879A5.877,5.877,0,0,1,52.914,0ZM64.673,29.4a5.873,5.873,0,0,1,5.879,5.879,7.026,7.026,0,0,1-.129,1.249A32.224,32.224,0,0,0,47.035,67.613a33.532,33.532,0,0,0,.57,6.118,29.153,29.153,0,0,1-6.449,2.113V94.07H29.4V75.844A29.541,29.541,0,0,1,5.879,47.035V41.156a5.879,5.879,0,0,1,0-11.759ZM52.914,67.613A26.457,26.457,0,1,1,79.371,94.07,26.464,26.464,0,0,1,52.914,67.613ZM85.4,52.62,67.76,65.849a2,2,0,0,0-.772,2.462,2.2,2.2,0,0,0,2.095,1.507h6.541l-5.53,9.958a2.192,2.192,0,0,0,.478,2.719,2.436,2.436,0,0,0,2.774.11L90.983,69.376a2.226,2.226,0,0,0,.772-2.462,2.2,2.2,0,0,0-2.095-1.507H83.12l5.53-9.958a2.467,2.467,0,0,0-.478-2.885,2.436,2.436,0,0,0-2.774.055Z"
+            fill="none" stroke="#1e1e1e" stroke-width="3" />
+        </g>
+      </svg>
+
+      <h3 class="font-semibold mt-4 mb-3">Electrical Works</h3>
+      <p class="mb-auto text-grey-900">
+        We diligently provide various on time electrical solutions
+      </p>
+    </div>
+    <!-- class="mx-auto h-24" -->
+    <div class="service_card grid text-center bg-white p-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 98.873 98.843">
+        <g id="mechanical_works_icon" transform="translate(2.652 2.637)">
+          <path id="Path_71" data-name="Path 71"
+            d="M299.5,2083.792l11.458-10.71L333,2089.895l1.245,11.333,19.3,19.926,8.842-1.245,6.476,4.11,23.289,23.04-.5,6.6-12.7,12.329-6.974-1.619-25.53-27.149.747-11.208-19.553-19.677H315.94Z"
+            transform="translate(-298.893 -2072.103)" fill="#46e317" stroke="#46e317" stroke-width="1" />
+          <path id="screwdriver-wrench"
+            d="M61.049,41.232a19.348,19.348,0,0,1,13.774,5.7l3.6,3.6A26.409,26.409,0,0,0,93.445,32.752a26.819,26.819,0,0,0,.04-12.585,2.672,2.672,0,0,0-4.478-1.215L76.329,31.629H62.419V17.883L75.1,5.206A2.672,2.672,0,0,0,73.881.727,26.82,26.82,0,0,0,61.3.767,26.448,26.448,0,0,0,41.572,22.184a24.3,24.3,0,0,0-.3,4.494L56.5,41.924A14.009,14.009,0,0,1,61.049,41.232Zm9.6,10.028A13.652,13.652,0,0,0,54.943,48.7L35.161,29.07V17.66L11.776,0,0,11.609,17.663,34.995H29.079L48.711,54.61A13.652,13.652,0,0,0,51.27,70.321L72.8,91.867a6.876,6.876,0,0,0,9.7,0L92.2,82.161a6.876,6.876,0,0,0,0-9.7ZM41.932,56.485,31.04,45.611l-27.4,27.4A12.415,12.415,0,1,0,21.2,90.565L43.114,68.651A19.542,19.542,0,0,1,41.932,56.485ZM11.776,86.844a4.416,4.416,0,1,1,4.416-4.416A4.417,4.417,0,0,1,11.776,86.844Z"
+            transform="translate(0 0.001)" fill="none" stroke="#000" stroke-width="3" />
+        </g>
+      </svg>
+
+      <h3 class="font-semibold mt-4 mb-3">Mechanical Works</h3>
+      <p class="mb-auto text-grey-900">
+        Installation of various appliances like air conditioners
+      </p>
+    </div>
+    <div class="service_card grid text-center bg-white p-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 95.777 96.188">
+        <g id="icon_-_cat" data-name="icon - cat" transform="translate(0 1.523)">
+          <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(7 44.505)" fill="none" stroke="#000"
+            stroke-width="3">
+            <circle cx="5" cy="5" r="5" stroke="none" />
+            <circle cx="5" cy="5" r="3.5" fill="none" />
+          </g>
+          <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(27 79.505)" fill="none" stroke="#000"
+            stroke-width="3">
+            <circle cx="5" cy="5" r="5" stroke="none" />
+            <circle cx="5" cy="5" r="3.5" fill="none" />
+          </g>
+          <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(78 79.505)" fill="none" stroke="#000"
+            stroke-width="3">
+            <circle cx="5" cy="5" r="5" stroke="none" />
+            <circle cx="5" cy="5" r="3.5" fill="none" />
+          </g>
+          <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(0 50.505)" fill="#46e317" stroke="#1e1e1e"
+            stroke-width="3">
+            <circle cx="12" cy="12" r="12" stroke="none" />
+            <circle cx="12" cy="12" r="10.5" fill="none" />
+          </g>
+          <path id="Path_12" data-name="Path 12" d="M314,2564.373v0Z" transform="translate(-302 -2518.495)" fill="none"
+            stroke="#000" stroke-width="3" />
+          <path id="Path_13" data-name="Path 13" d="M386.505,2570.413v16.859H337.941v-6.291l42.022-10.568Z"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_14" data-name="Path 14" d="M359.3,2575.948v-17.363h15.124v12.078"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_15" data-name="Path 15" d="M382.479,2569v-18.215H355.3l-3.523,3.775v22.4"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_16" data-name="Path 16"
+            d="M339,2578.842l-27.732-55.988s1.258-5.788,6.794-4.026c.252-.5,33.467,57.875,33.467,57.875"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_17" data-name="Path 17" d="M348.006,2587.272v5.284" transform="translate(-302 -2518.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_19" data-name="Path 19" d="M348.006,2587.272v6.911" transform="translate(-306 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_33" data-name="Path 33" d="M348.006,2587.271v62.387"
+            transform="translate(2676.209 -273.031) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_34" data-name="Path 34" d="M348.006,2587.271v62.387"
+            transform="translate(2676.209 -254.841) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_30" data-name="Path 30" d="M348.006,2587.272v6.911" transform="translate(-306 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_20" data-name="Path 20" d="M348.006,2587.272v6.911" transform="translate(-299 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_29" data-name="Path 29" d="M348.006,2587.272v6.911" transform="translate(-299 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_21" data-name="Path 21" d="M348.006,2587.272v6.911" transform="translate(-293 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_28" data-name="Path 28" d="M348.006,2587.272v6.911" transform="translate(-293 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_22" data-name="Path 22" d="M348.006,2587.272v6.911" transform="translate(-287 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_27" data-name="Path 27" d="M348.006,2587.272v6.911" transform="translate(-287 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_23" data-name="Path 23" d="M348.006,2587.272v6.911" transform="translate(-281 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_26" data-name="Path 26" d="M348.006,2587.272v6.911" transform="translate(-281 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_24" data-name="Path 24" d="M348.006,2587.272v6.911" transform="translate(-275 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_25" data-name="Path 25" d="M348.006,2587.272v6.911" transform="translate(-275 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_18" data-name="Path 18" d="M372.163,2587.272v5.536" transform="translate(-302 -2518.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_31" data-name="Path 31" d="M329.214,2593.272s-13.346,9.209,0,18.645"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_32" data-name="Path 32" d="M329.214,2593.272s-13.346,9.209,0,18.645"
+            transform="translate(417.496 2686.694) rotate(180)" fill="none" stroke="#000" stroke-width="3" />
+        </g>
+      </svg>
+      <h3 class="font-semibold mt-4 mb-3">Flooring and Roofing</h3>
+      <p class="mb-auto text-grey-900">
+        We do construction of both residential and commercial buildings
+      </p>
+    </div>
+    <div class="service_card grid text-center bg-white p-8">
+      <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-24" viewBox="0 0 95.777 96.188">
+        <g id="icon_-_cat" data-name="icon - cat" transform="translate(0 1.523)">
+          <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(7 44.505)" fill="none" stroke="#000"
+            stroke-width="3">
+            <circle cx="5" cy="5" r="5" stroke="none" />
+            <circle cx="5" cy="5" r="3.5" fill="none" />
+          </g>
+          <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(27 79.505)" fill="none" stroke="#000"
+            stroke-width="3">
+            <circle cx="5" cy="5" r="5" stroke="none" />
+            <circle cx="5" cy="5" r="3.5" fill="none" />
+          </g>
+          <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(78 79.505)" fill="none" stroke="#000"
+            stroke-width="3">
+            <circle cx="5" cy="5" r="5" stroke="none" />
+            <circle cx="5" cy="5" r="3.5" fill="none" />
+          </g>
+          <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(0 50.505)" fill="#46e317" stroke="#1e1e1e"
+            stroke-width="3">
+            <circle cx="12" cy="12" r="12" stroke="none" />
+            <circle cx="12" cy="12" r="10.5" fill="none" />
+          </g>
+          <path id="Path_12" data-name="Path 12" d="M314,2564.373v0Z" transform="translate(-302 -2518.495)" fill="none"
+            stroke="#000" stroke-width="3" />
+          <path id="Path_13" data-name="Path 13" d="M386.505,2570.413v16.859H337.941v-6.291l42.022-10.568Z"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_14" data-name="Path 14" d="M359.3,2575.948v-17.363h15.124v12.078"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_15" data-name="Path 15" d="M382.479,2569v-18.215H355.3l-3.523,3.775v22.4"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_16" data-name="Path 16"
+            d="M339,2578.842l-27.732-55.988s1.258-5.788,6.794-4.026c.252-.5,33.467,57.875,33.467,57.875"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_17" data-name="Path 17" d="M348.006,2587.272v5.284" transform="translate(-302 -2518.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_19" data-name="Path 19" d="M348.006,2587.272v6.911" transform="translate(-306 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_33" data-name="Path 33" d="M348.006,2587.271v62.387"
+            transform="translate(2676.209 -273.031) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_34" data-name="Path 34" d="M348.006,2587.271v62.387"
+            transform="translate(2676.209 -254.841) rotate(90)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_30" data-name="Path 30" d="M348.006,2587.272v6.911" transform="translate(-306 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_20" data-name="Path 20" d="M348.006,2587.272v6.911" transform="translate(-299 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_29" data-name="Path 29" d="M348.006,2587.272v6.911" transform="translate(-299 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_21" data-name="Path 21" d="M348.006,2587.272v6.911" transform="translate(-293 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_28" data-name="Path 28" d="M348.006,2587.272v6.911" transform="translate(-293 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_22" data-name="Path 22" d="M348.006,2587.272v6.911" transform="translate(-287 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_27" data-name="Path 27" d="M348.006,2587.272v6.911" transform="translate(-287 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_23" data-name="Path 23" d="M348.006,2587.272v6.911" transform="translate(-281 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_26" data-name="Path 26" d="M348.006,2587.272v6.911" transform="translate(-281 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_24" data-name="Path 24" d="M348.006,2587.272v6.911" transform="translate(-275 -2512.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_25" data-name="Path 25" d="M348.006,2587.272v6.911" transform="translate(-275 -2501.222)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_18" data-name="Path 18" d="M372.163,2587.272v5.536" transform="translate(-302 -2518.495)"
+            fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_31" data-name="Path 31" d="M329.214,2593.272s-13.346,9.209,0,18.645"
+            transform="translate(-302 -2518.495)" fill="none" stroke="#000" stroke-width="3" />
+          <path id="Path_32" data-name="Path 32" d="M329.214,2593.272s-13.346,9.209,0,18.645"
+            transform="translate(417.496 2686.694) rotate(180)" fill="none" stroke="#000" stroke-width="3" />
+        </g>
+      </svg>
+      <h3 class="font-semibold mt-4 mb-3">Plumbing</h3>
+      <p class="mb-auto text-grey-900">
+        We do plumbing: fitting pipes and all water related appliances
+      </p>
+    </div>
+  </div>
+</section>
+<!-- why us -->
+<section class="">
+  <div class="container mx-auto flex flex-col-reverse sm:flex-row gap-8">
+    <div class="grid flex-1">
+      <h2 class="text-3xl font-semibold">
+        Why choose us for your next project !
+      </h2>
+      <p class="text-grey-600">
+        Bring to the table win-win strategies to ensure proactive
+        domination. At the end of the day, going forward, a new normal
+        that has evolved from generation X is on the runway.
+      </p>
+      <ul>
+        <li class="flex gap-4 my-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5" viewBox="0 0 24.935 17.81">
+            <path id="check"
+              d="M24.413,96.533a1.777,1.777,0,0,1,0,2.516L10.164,113.3a1.777,1.777,0,0,1-2.516,0L.522,106.173a1.78,1.78,0,1,1,2.519-2.516l5.815,5.861L21.9,96.533a1.775,1.775,0,0,1,2.516,0Z"
+              transform="translate(0 -96.01)" fill="#46e317" />
+          </svg>
+          <span>Expert and professional engineers</span>
+        </li>
+        <li class="flex gap-4 my-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5" viewBox="0 0 24.935 17.81">
+            <path id="check"
+              d="M24.413,96.533a1.777,1.777,0,0,1,0,2.516L10.164,113.3a1.777,1.777,0,0,1-2.516,0L.522,106.173a1.78,1.78,0,1,1,2.519-2.516l5.815,5.861L21.9,96.533a1.775,1.775,0,0,1,2.516,0Z"
+              transform="translate(0 -96.01)" fill="#46e317" />
+          </svg>
+          <span>15+ year experience</span>
+        </li>
+        <li class="flex gap-4 my-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5" viewBox="0 0 24.935 17.81">
+            <path id="check"
+              d="M24.413,96.533a1.777,1.777,0,0,1,0,2.516L10.164,113.3a1.777,1.777,0,0,1-2.516,0L.522,106.173a1.78,1.78,0,1,1,2.519-2.516l5.815,5.861L21.9,96.533a1.775,1.775,0,0,1,2.516,0Z"
+              transform="translate(0 -96.01)" fill="#46e317" />
+          </svg>
+          <span>Fully satisfaction guarantee</span>
+        </li>
+      </ul>
+    </div>
+    <figure class="flex-1">
+      <img src="{% static 'images/home-about.jpg' %}" alt="about us" class="h-full object-cover" />
+    </figure>
+  </div>
+</section>
+<!-- works -->
+<section class="py-20">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">Our Projects</h2>
+    <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
+      {% for p in projects %}
+      <figure class="home-project-card">
+        <img src="{{ p.project.thumbnail.url }}" alt="" class="object-cover" />
+        <figcaption>
+          <h3>{{ p.project.name }}</h3>
+          <a href="{% url 'projects:detail' p.project.pk %}" class="text-primary-100">View Project
+          </a>
+        </figcaption>
       </figure>
+      {% endfor %}
     </div>
-  </section>
-  <!-- works -->
-  <section class="py-20">
-    <div class="container mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-8">Our Projects</h2>
-      <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
-  
-        {% for p in projects %}
-        <figure class="home-project-card">
-          <img src="{{ p.project.thumbnail.url }}" alt="" class="object-cover">
-          <figcaption>
-            <h3>{{ p.project.name }}</h3>
-            <a href="{% url 'projects:detail' p.project.pk %}" class=" text-primary-100">View Project </a>
-          </figcaption>
-        </figure>
-        {% endfor %}
-  
-      </div>
-    </div>
-  </section>
-  <!-- last call-to action -->
-  <section class="py-24 bg-primary-500 text-black">
-    <div class="container text-center mx-auto">
-      <h2 class="text-4xl font-semibold">With over 10 years experience in construction</h2>
-      <p class="my-8 text-lg">We are very capable and qualified to execute your next project.</p>
-      <button class=" bg-white text-black rounded-lg text-lg py-4 px-8 hover:bg-slate-200">
-        <a href="#" class="">Contact us now</a>
-      </button>
-    </div>
-  </section>
+  </div>
+</section>
+<!-- last call-to action -->
+<section class="py-24 bg-primary-500 text-black">
+  <div class="container text-center mx-auto">
+    <h2 class="text-4xl font-semibold">
+      With over 10 years experience in construction
+    </h2>
+    <p class="my-8 text-lg">
+      We are very capable and qualified to execute your next project.
+    </p>
+    <button class="bg-white text-black rounded-lg text-lg py-4 px-8 hover:bg-slate-200">
+      <a href="#" class="">Contact us now</a>
+    </button>
+  </div>
+</section>
 
 {% endblock content %}
 
 <div class="bg-green-900 rounded-lg shadow-lg">
-  <img src="{% static 'temp/images (3).jpeg' %}" alt="Service 1" class="h-48 w-full object-cover">
+  <img src="{% static 'temp/images (3).jpeg' %}" alt="Service 1" class="h-48 w-full object-cover" />
   <div class="p-6">
     <h3 class="text-2xl font-bold mb-2 text-white">Interior Design</h3>
-    <p class="text-gray-200 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel nisl vel velit
-      placerat dignissim at vel diam.</p>
+    <p class="text-gray-200 mb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
+      nisl vel velit placerat dignissim at vel diam.
+    </p>
     <a href="{% url 'services:main-page' %}"
       class="inline-block px-4 py-2 font-bold text-gray-100 bg-green-500 rounded-full hover:bg-green-600">
       Learn More

@@ -6,6 +6,10 @@
     @apply px-4 mx-auto;
 }
 
+.img-fluid {
+    @apply w-full h-full object-cover;
+}
+
 nav menu {
     a {
         &:hover {
@@ -25,7 +29,7 @@ nav menu {
 
 .service_card {
     svg {
-        scale: .8;
+        scale: 0.8;
     }
 }
 
@@ -39,7 +43,7 @@ nav menu {
     .line_a {
         &.in {
             animation-name: rotatePos;
-            animation-duration: .5s;
+            animation-duration: 0.5s;
         }
     }
 
@@ -54,7 +58,7 @@ nav menu {
     .line_c {
         &.in {
             animation-name: rotateNeg;
-            animation-duration: .5s;
+            animation-duration: 0.5s;
         }
     }
 }
@@ -117,12 +121,16 @@ nav menu {
         outline: none;
     }
 
-    .input:focus~label,
-    input:valid~label,
-    textarea:valid~label {
+    .input:focus ~ label,
+    input:valid ~ label,
+    textarea:valid ~ label {
         @apply text-white font-semibold;
         background-color: rgb(70 227 23);
         transform: translateY(-50%) scale(0.8);
         padding: 0 0.2em;
     }
 }
+
+/*#region slider*/
+
+/*#endregion*/

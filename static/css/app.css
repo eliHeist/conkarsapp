@@ -5,6 +5,10 @@
   @apply px-4 mx-auto;
 }
 
+.img-fluid {
+  @apply w-full h-full object-cover;
+}
+
 nav menu a:hover {
   color: rgb(24, 75, 9);
 }
@@ -98,4 +102,7 @@ nav menu a:hover {
   background-color: rgb(70, 227, 23);
   transform: translateY(-50%) scale(0.8);
   padding: 0 0.2em;
-}/*# sourceMappingURL=app.css.map */
+}
+
+/*#region slider*/
+/*#endregion*//*# sourceMappingURL=app.css.map */

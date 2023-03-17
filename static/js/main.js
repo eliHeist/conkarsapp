@@ -76,3 +76,132 @@ window.addEventListener("scroll", () => {
 	lastScroll = currentScroll;
 });
 
+//#region slider
+// let slides = document.getElementById('slides').children
+
+// let currentSlide = 1000;
+// let nextSlide = 0;
+
+// function slide() {
+//    let next = slides[nextSlide]
+//    let current = slides[currentSlide]
+
+//    const t1 = gsap.timeline({ paused: true, defaults: { Easings: Expo.EaseOut } })
+   
+//    if (current) {
+//       t1.to(current.querySelector('.fade-in'), { opacity: 0, scale: 0.1, duration: 0.3 })
+//          .to(current.querySelector('button'), { opacity: 0, scale: 0.1, duration: 0.4 }, '+=0.1')
+//          .to(current, { clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)' })
+//    }
+//    t1.fromTo(next, { clipPath: 'polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)'}, { clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', duration: 1 }, '-=1.5')
+//       .to(next.querySelector('.fade-in'), { opacity: 1, scale: 1, duration: 0.5 }, '+=0.1')
+//       .to(next.querySelector('button'), { opacity: 1, scale: 1, duration: 0.5 }, '+=0.1')
+      
+   
+//    t1.play()
+//    // switch next and previous slides
+//    switchSlides()
+// }
+
+// function switchSlides() {
+//    let max = slides.length-1
+//    if (nextSlide == max) {
+//       currentSlide = nextSlide
+//       nextSlide = 0
+//    }
+//    else {
+//       currentSlide = nextSlide
+//       nextSlide += 1
+//    }
+// }
+
+// slide()
+// setInterval(slide, 10000)
+//#endregion
+
+
+let carousel = null
+let carouselslides = null
+let carouselslideLength = null
+let carouselcurrentSlide = null
+
+function setCarouselDefaults() {
+    carousel = document.getElementById('carouselSlides')
+    carouselslides = document.querySelectorAll('#carouselSlides .carouselSlide')
+    carouselslideLength = carouselslides.length - 1
+    carouselcurrentSlide = -1
+
+    // set the slides initially
+    carouselslides.forEach(slide => {
+        gsap.set(slide.querySelectorAll('.content > *'), {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'
+        })
+        gsap.set(slide, {
+            clipPath: 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)'
+        })
+    });
+}
+
+class CarouselSlider {
+    // method to show the slide
+    static showSlide(num) {
+        // showing next slide
+        const timeline1 = gsap.timeline({
+            paused: true,
+            defaults: {
+                Easings: Expo.EaseOut
+            }
+        }).to(carouselslides[carouselcurrentSlide], {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            duration: 0.9
+        }, '+=.7').to(carouselslides[carouselcurrentSlide].querySelectorAll('.content > *'), {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+            duration: 0.4,
+            stagger: 0.15
+        }, '+=.5')
+        timeline1.play()
+    }
+    // method to hide the slide
+    static hideSlide(num) {
+        // hiding previous slide
+        const timeline2 = gsap.timeline({
+            paused: true,
+            defaults: {
+                Easings: Expo.easeInOut
+            }
+        }).to(carouselslides[carouselcurrentSlide].querySelectorAll('.content > *'), {
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+            duration: 0.4,
+            stagger: 0.15
+        }).to(carouselslides[carouselcurrentSlide], {
+            clipPath: 'polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)',
+            duration: 0.6,
+            delay: 2
+        }, '+=1')
+        timeline2.play()
+    }
+    static nextSlide() {
+        if (carouselcurrentSlide == carouselslideLength) {
+            return carouselcurrentSlide = 0
+        } else {
+            return ++carouselcurrentSlide
+        }
+    }
+    static switchSlides() {
+        console.log(carouselcurrentSlide);
+
+        if (carouselcurrentSlide >= 0) {
+            CarouselSlider.hideSlide(carouselcurrentSlide)
+            CarouselSlider.showSlide(CarouselSlider.nextSlide())
+        }
+        else {
+            CarouselSlider.showSlide(CarouselSlider.nextSlide())
+        }
+    }
+}
+
+// Carousel.switchSlides()
+console.log('start')
+setCarouselDefaults()
+CarouselSlider.switchSlides()
+setInterval(CarouselSlider.switchSlides, 20000)
