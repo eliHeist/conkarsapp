@@ -188,7 +188,7 @@ form.heist_form{
          color: var(--color-light-2);
          accent-color: var(--color-accent);
       }
-      input[type="text"], textarea{
+      input[type="text"], input[type="email"], textarea{
          background-color: var(--color-dark);
          border: none;
          padding: var(--rem-1);

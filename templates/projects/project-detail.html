@@ -3,30 +3,57 @@
 
 {% block content %}
 
+<section class="relative mb-10 md:-mb-10 lg:-mb-20">
+   <div class="bg-dark-100 h-64 sm:hidden"></div>
+   <svg xmlns="http://www.w3.org/2000/svg"
+      class="w-full scale-x-[2.2] translate-x-[-60%] sm:scale-100 sm:translate-x-0 sm:translate-y-0 -translate-y-1 origin-top md:scale-y-75"
+      viewBox="0 0 1921.964 772.07">
+      <path id="Path_66" data-name="Path 66"
+         d="M3910.709,468.329,2869.224,562.49l-877.188-36.182,992.478,314.539,926.195-314.539Z"
+         transform="translate(-1988.744 -68.778)" fill="#46e317" />
+      <path id="Path_65" data-name="Path 65"
+         d="M1988.744,69.137l1921.964-.359L3910.289,515l-1194.54,300.78-727-289.469Z"
+         transform="translate(-1988.744 -68.778)" fill="#1e1e1e" />
+   </svg>
+   <div class="absolute top-0 left-0 w-full h-full md:pb-20 grid place-content-center">
+      <h1
+         class="text-6xl text-center font-bold text-white relative after:absolute after:w-1/2 after:h-1 after:bg-primary-500 after:-bottom-2 after:left-1/2 after:-translate-x-1/2">
+         Project</h1>
+   </div>
+</section>
+
 <main id="project" class="container mx-auto py-8">
    
-   <div class="flex mb-4">
-      <img src="{{ project.thumbnail.url }}" alt="Project 1" class="h-32 mr-4">
-      <div>
-         <h2 class="text-3xl font-bold mb-4">{{ project.name }}</h2>
-         <ul class="flex gap-2">
+   <div class="flex flex-col sm:flex-row mb-4">
+      <img src="{{ project.thumbnail.url }}" alt="Project 1" class="sm:w-1/2 sm:mr-4 aspect-video rounded-lg shadow-xl">
+      <div class=" sm:flex-col-reverse sm:flex sm:mb-auto">
+         <ul class="flex flex-wrap gap-2 my-2">
             
             {% for cat in project.categories.all %}
-               <li class="bg-gray-200 rounded-full px-3 py-1 mr-2 font-semibold text-gray-700">{{ cat.name }}</li>
+               <li class="bg-secondary-100 rounded-full px-3 py-1 mr-2 font-semibold text-grey-800 text-xs">{{ cat.name }}</li>
             {% endfor %}
                
          </ul>
+         <h2 class="text-3xl font-bold mt-4 sm:mt-0 sm:text-4xl text-primary-100">{{ project.name }}</h2>
       </div>
    </div>
-   <p class="text-xl font-bold mb-4">Description:</p>
+   <!-- <p class="text-xl font-bold mb-4">Description:</p> -->
    <p class="mb-8">{{ project.long_description }}</p>
-   <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+   <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
       
       {% for p in project.photos.all %}
-         <img src="{{ p.thumbnail }}" alt="Project 1 Image 1" class="h-64 w-full rounded-lg shadow-lg">
+         <figure>
+            <img src="{{ p.thumbnail }}" alt="Project 1 Image 1" class="h-64 w-full rounded-lg shadow-lg">
+            
+            {% if p.title %}
+               <figcaption class="mt-4">{{ p.title }}</figcaption>
+            {% endif %}
+               
+         </figure>
       {% endfor %}
          
    </div>
 </main>
 
 {% endblock content %}
+

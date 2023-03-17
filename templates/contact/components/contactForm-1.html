@@ -1,26 +1,78 @@
 
-<form method="post">
-   {% csrf_token %}
+<form method="POST" x-data="{
+   uiStatus: {
+      message: '',
+      toggle: false,
+   },
+   mail: {
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+   },
+   csrf() {
+      token = document.getElementById('token').firstElementChild.value;
+      return token;
+   },
+   sendMessage() {
+      this.uiStatus.message = 'Sending...'
+      this.uiStatus.toggle = true
+      fetch(`{% url 'contact:send-message' %}`, {
+            method: 'POST',
+            headers: {
+               Accept: 'application/json',
+               'Content-Type': 'application/json',
+               'X-CSRFToken': this.csrf(),
+            },
+            body: JSON.stringify(this.mail),
+      }).then((response) => response.json()).then((json) => {
+         this.uiStatus.message = json
+         if (this.uiStatus.message === 'SUCCESS') {
+            this.uiStatus.message = 'Message sent ✔️'
+            // clear fields
+            this.mail.name = ''
+            this.mail.email = ''
+            this.mail.phone = ''
+            this.mail.message = ''
+         }
+         setTimeout(()=>{
+            this.uiStatus.toggle=false
+            this.uiStatus.message=''
+         },3000)
+      });
+      
+   }
+}" @submit.prevent="sendMessage()">
+   <div id="token">{% csrf_token %}</div>
    <div class="mb-8">
       <div class="input-group">
-         <input required name='full_name' title="full_name" type='text' class="input text-black bg-grey-200" />
+         <input required name='full_name' title="full_name" type='text' class="input text-black bg-grey-200" x-model="mail.name"/>
          <label class="user-label text-black" for="full_name">Name</label>
       </div>
    </div>
    <div class="grid lg:grid-cols-2 gap-4">
       <div class="input-group">
-         <input required name='email' title="email" type='email' class="input text-black bg-grey-200" />
+         <input required name='email' title="email" type='email' class="input text-black bg-grey-200" x-model="mail.email" />
          <label class="user-label text-black" for="email">Email</label>
       </div>
       <div class="input-group">
-         <input required name='phone' title="phone" type='tel' class="input text-black bg-grey-200" />
+         <input required name='phone' title="phone" type='tel' class="input text-black bg-grey-200" x-model="mail.phone" />
          <label class="user-label text-black" for="phone">Phone</label>
       </div>
    </div>
    <div class="my-8">
       <div class="input-group">
-         <textarea required name='message' title="message" type='text' class="input text-black bg-grey-200" rows="5"></textarea>
+         <textarea required name='message' title="message" type='text' class="input text-black bg-grey-200" rows="5" x-model="mail.message"></textarea>
          <label class="user-label text-black" for="message">Message</label>
+      </div>
+   </div>
+   <div x-show="uiStatus.toggle" class="my-4 rounded-lg bg-grey-900">
+      <div class="relative">
+         <div class="absolute -inset-0.5 bg-gradient-to-b from-primary-100 to-primary-500 rounded-lg blur-md"></div>
+         <div id="status-pill"
+            class="relative py-4 px-8 bg-grey-900 rounded-lg text-white transition-all">
+            <span x-text="uiStatus.message"></span>
+         </div>
       </div>
    </div>
    <div class="mt-8 grid">

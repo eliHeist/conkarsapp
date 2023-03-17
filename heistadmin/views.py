@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.forms import inlineformset_factory
+from contact.forms import SubscriberForm
+from contact.models import Subscriber
 
 from projects.forms import CartegoryForm, ProjectForm
 
@@ -17,7 +19,7 @@ class RegMod():
       self.formset_model = formset_model
       self.formset_fields = formset_fields
       
-registered_models = {
+registered_models = [
    RegMod(
       model=Project,
       form_class=ProjectForm,
@@ -34,7 +36,14 @@ registered_models = {
       model=Person,
       form_class=PersonForm,
    )
-}
+]
+registered_models.append(
+   RegMod(
+      model=Subscriber,
+      form_class=SubscriberForm,
+      list_display={}
+   )
+)
 
 
 slug_context = {}

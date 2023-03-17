@@ -176,13 +176,13 @@ form.heist_form p input, form.heist_form p textarea {
   color: var(--color-light-2);
   accent-color: var(--color-accent);
 }
-form.heist_form p input[type=text], form.heist_form p textarea {
+form.heist_form p input[type=text], form.heist_form p input[type=email], form.heist_form p textarea {
   background-color: var(--color-dark);
   border: none;
   padding: var(--rem-1);
   border-radius: var(--rem-1);
 }
-form.heist_form p input[type=text]:focus-visible, form.heist_form p textarea:focus-visible {
+form.heist_form p input[type=text]:focus-visible, form.heist_form p input[type=email]:focus-visible, form.heist_form p textarea:focus-visible {
   outline: var(--color-accent) solid 2px;
 }
 form.heist_form p:has(input[accept="image/*"]) .grid {
