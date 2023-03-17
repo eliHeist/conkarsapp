@@ -27,7 +27,7 @@
    <!-- intro -->
    <section>
       <div class="sm:container mx-auto grid sm:grid-cols-2">
-         <p class="p-4 sm:p-0 sm:pr-8">
+         <p class="p-4 sm:p-0 sm:pr-8 fade-in">
             As the name suggests, CONKARAS UGANDA LIMITED became a listed entity and incorporated on the 1st of August,
             2017 in accordance with the requirements of the laws of Uganda. It is evolving to being a diversified
             construction, infrastructure concessions and services company with an established and growing international and
@@ -42,7 +42,7 @@
             (GFCF). The company has a clear strategy of using its collective skills and understanding of markets to develop
             a unique value proposition to clients.
          </p>
-         <div class="p-8 text-white bg-primary-100 mt-4 sm:mt-0">
+         <div class="slide-in-left p-8 text-white bg-primary-100 mt-4 sm:mt-0">
             <h3 class=" font-semibold text-lg">MISSION</h3>
             <p class="text-leads">To increase stakeholders’ Value</p>
             <h3 class=" font-semibold text-lg mt-8">VISION</h3>
@@ -59,7 +59,7 @@
    </section>
    <!-- core values -->
    <section class="py-16 sm:py-20">
-      <div class="container mx-auto">
+      <div class="container mx-auto fade-in">
          <h2 class="font-semibold text-3xl mb-6">Core values</h2>
          <ul class="text-grey-800 list-disc">
             <li>Corporate services</li>
@@ -74,8 +74,8 @@
    <!-- code of ethics -->
    <section>
       <div class="container mx-auto">
-         <h2 class="font-semibold text-3xl mb-6">Code of Ethics</h2>
-         <div>
+         <h2 class="font-semibold text-3xl mb-6 fade-in">Code of Ethics</h2>
+         <div class=" fade-in">
             <p>
                Conkaras Uganda Limited’s Code of Conduct outlines expected behaviors for all Conkaras employees. Conkaras
                will conduct its business fairly, impartially, in an ethical and proper manner, and in full compliance with
@@ -122,8 +122,8 @@
    <!-- Healthy and safety policy -->
    <section class="mt-16 sm:mt-20">
       <div class="container mx-auto">
-         <h2 class="text-3xl font-semibold mb-6">Health and Safety Policy</h2>
-         <div>
+         <h2 class="text-3xl font-semibold mb-6 fade-in">Health and Safety Policy</h2>
+         <div class=" fade-in">
             <p class="mb-4">
                At Conkaras we believe the protection of the environment is an important element of our corporate culture
                and that no process is so important that we cannot find a safe, healthy and environmentally sound way of
@@ -187,11 +187,11 @@
    <!-- out team -->
    <section class="my-16 sm:my-20">
       <div class="container mx-auto">
-         <h2 class="text-3xl font-semibold mb-6">Our Team</h2>
+         <h2 class="text-3xl font-semibold mb-6 fade-in">Our Team</h2>
          <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             
             {% for person in people %}
-               <div class="text-center">
+               <div class="text-center slide-in-top">
                   <img src="{{ person.image.url }}" alt="{{ person.name }}" class="aspect-[3/3.5] object-cover">
                   <h3 class="font-bold mt-2 mb-1 uppercase">{{ person.position }}</h3>
                   <p>{{ person.full_name }}</p>

@@ -17,8 +17,14 @@
    {% include 'components/footer.html' %}
 
 <script src="{% static 'js/gsap/gsap.min.js' %}"></script>
+<script src="{% static 'js/gsap/ScrollTrigger.min.js' %}"></script>
 <script src="{% static 'js/alpine.js' %}"></script>
 <script type="module" src="{% static 'js/main.js' %}"></script>
+
+<script>
+   var homepage = false
+</script>
+{% block scripts %}{% endblock scripts %}
 
 </body>
 
