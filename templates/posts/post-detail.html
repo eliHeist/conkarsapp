@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% load static %}
+
+
+{% block content %}
+<section class="bg-dark-100 pt-32 pb-16 mb-10">
+   <div class="text-center container">
+      <h1 class="text-primary-500 text-3xl font-bold uppercase">{{ article.title }}</h1>
+   </div>
+</section>
+
+<main class="mb-16">
+   <div class="container">
+      <div class="cover">
+         
+         {% if article.thumbnail %}
+            <figure>
+               <img src="{{ article.thumbnail.url }}" alt="{{ article.title }}" class=" aspect-video object-cover w-full rounded-lg shadow-md">
+            </figure>
+         {% endif %}
+         <span class="block text-grey-700 mb-4">{{ article.date_posted }}</span>
+         <p class=" text-grey-900">{{ article.body }}</p>
+         
+         {% if article.images %}
+         <!-- postponed -->
+         <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <img src="" alt="">
+         </div>
+         {% endif %}
+         
+         <div class="flex flex-wrap justify-between mt-4">
+            {% if article.project %}
+            <a href="{% url 'projects:detail' article.project.pk %}" class=" text-primary-100 hover:text-primary-500">View Project: <span
+                  class="font-medium">{{ article.project.name }}</span></a>
+            {% endif %}
+            <a href="{% url 'posts:list' %}" class=" text-primary-100 hover:text-primary-500">More articles</a>
+         </div>
+            
+      </div>
+   </div>
+</main>
+{% endblock content %}

@@ -6,6 +6,10 @@
     @apply px-4 mx-auto;
 }
 
+.cover{
+    @apply px-4 mx-auto max-w-screen-md;
+}
+
 .img-fluid {
     @apply w-full h-full object-cover;
 }
