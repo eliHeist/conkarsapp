@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'heistadmin',
     'team',
     'posts',
+
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [
