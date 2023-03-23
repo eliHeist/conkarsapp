@@ -1,0 +1,30 @@
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+   section{
+   padding:2rem;
+   background-color:rgb(70 227 23);
+   font-size: 1.2rem;
+   font-family: 'Poppins', sans-serif;
+   }
+   .message{
+   font-size: 1.5rem;
+   }
+   p{
+   font-weight: 500;
+   font-size: 1.1rem;
+   color: #222;
+   }
+</style>
+
+<section>
+   <div class="message">
+      {{ message }}
+   </div>
+   <p><span>Name:</span>{{ name }}</p>
+   <p><span>Email:</span>{{ email }}</p>
+   <p><span>Phone:</span>{{ phone }}</p>
+   <div>
+      Sent from <a href="amartislab.pythonanywhere.com/contact">amartislab.pythonanywhere.com/contact</a>, form.
+   </div>
+</section>
