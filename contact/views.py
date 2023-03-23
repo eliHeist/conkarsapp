@@ -44,7 +44,7 @@ def sendMessage(request):
    if request.method == 'POST':
       data = request.data
       print(data)
-      message = f"Name: {data.get('name')}\nEmail: {data.get('email')}\nPhone: {data.get('phone')}\nMessage: {data.get('message')}"      
+      # message = f"Name: {data.get('name')}\nEmail: {data.get('email')}\nPhone: {data.get('phone')}\nMessage: {data.get('message')}"      
       html_message = render_to_string('contact/components/mail_template.html', {'name': data.get('name'), 'email': data.get('email'), 'phone': data.get('phone'), 'message': data.get('message')})
       plain_message = strip_tags(html_message)
 
