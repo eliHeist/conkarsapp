@@ -8,7 +8,7 @@ environ.Env.read_env()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-#+66p4de06cyni#bsjg4aix*3$aa2%hl(b3+-e@%wtzfeu$l(h'
+SECRET_KEY = env('SECRET_KEY')
 
 DEBUG = env('DEBUG')
 
@@ -31,7 +31,6 @@ INSTALLED_APPS = [
     'services',
     'contact',
     'about',
-    'heistadmin',
     'team',
     'posts',
 
@@ -128,7 +127,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static/public/'),
 ]
 
 # Default primary key field type
@@ -146,21 +145,3 @@ EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
 TO_EMAILS = env.list('TO_EMAILS')
 # end email
-
-if not DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': os.getenv("DB_ENGINE"),
-            'NAME': os.getenv("DB_NAME"),
-            'USER': os.getenv("DB_USER"),
-            'PASSWORD': os.getenv("DB_PASSWORD"),
-            'HOST': os.getenv("DB_HOST"),
-            # 'PORT': os.getenv("DB_PORT"),
-            # uncomment below for mysql
-            # "OPTIONS": {
-            #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES', innodb_strict_mode=1",
-            #     'charset': 'utf8mb4',
-            #     "autocommit": True,
-            # }
-        }
-    }

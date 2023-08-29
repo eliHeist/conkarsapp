@@ -8,10 +8,12 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="icon" href="{% static 'images/logo.jpg' %}">
    <title>Conkaras | Home</title>
-   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'dist/bundle.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.min.css' %}">
 </head>
 
-<body class="bg-grey-200 selection:bg-primary-500 selection:text-white font-body scroll-smooth">
+<body class="bg-grey-200 selection:bg-primary-500 selection:text-white font-poppins scroll-smooth overflow-x-hidden">
+    <!--  -->
    {% include 'components/header.html' %}
    {% block content %}
    {% endblock content %}
@@ -20,7 +22,7 @@
 <script src="{% static 'js/gsap/gsap.min.js' %}"></script>
 <script src="{% static 'js/gsap/ScrollTrigger.min.js' %}"></script>
 <script src="{% static 'js/alpine.js' %}"></script>
-<script type="module" src="{% static 'js/main.js' %}"></script>
+<script type="module" src="{% static 'dist/bundle.js' %}"></script>
 
 <script>
    var homepage = false

@@ -11,7 +11,7 @@ class Article(models.Model):
    date_posted = models.DateTimeField(auto_now_add=True)
    summary = models.TextField(null=True, blank=True)
    body = models.TextField(null=True)
-   pictures = models.ManyToManyField(Image, null=True, blank=True)
+   pictures = models.ManyToManyField(Image, blank=True)
    project = models.ForeignKey(Project, on_delete=models.SET_NULL, null=True, blank=True)
 
    def __str__(self):

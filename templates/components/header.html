@@ -1,98 +1,43 @@
 {% load static %}
 
 
-<header class="fixed w-full z-20 transition-all show" id="navbar-sticky">
-   <div class="bg-white py-3">
-      <div id="nav-top-bar" class="container flex gap-8 content-center mx-auto justify-center sm:justify-end text-sm">
-         <a class="flex gap-2 items-center" href="tel:+256756923089">
-            <svg xmlns="http://www.w3.org/2000/svg" class=" h-4" viewBox="0 0 20.539 20.544">
-               <path
-                  d="M19.494,14.752,18.607,18.6a1.185,1.185,0,0,1-1.162.924A17.465,17.465,0,0,1,0,2.073,1.185,1.185,0,0,1,.924.911L4.767.025A1.2,1.2,0,0,1,6.132.716L7.906,4.853a1.193,1.193,0,0,1-.342,1.39L5.51,7.892a13.333,13.333,0,0,0,6.082,6.082l1.681-2.052a1.186,1.186,0,0,1,1.391-.342L18.8,13.354A1.3,1.3,0,0,1,19.494,14.752Z"
-                  transform="translate(0.5 0.525)" fill="none" stroke="#000" stroke-width="1" />
-            </svg>
-            <span>+256 756 923 089</span>
+<header class="bg-white fixed w-full z-20 transition-all show overflow-hidden" id="navbar-sticky">
+   <nav class="py-2">
+      <div class="container mx-auto grid grid-flow-col content-center justify-between">
+         <a class="navbar-brand grid grid-flow-col gap-2 content-center" href="/">
+            <img src="{% static 'images/logo.png' %}" alt="Conkaras logo" class="h-16">
+            <p class="font-bold grid grid-flow-row content-center text-2xl uppercase text-primary-100">
+                <span>Conkaras (U) Limited</span>
+            </p>
          </a>
-         <a class="sm:flex gap-2 items-center hidden" href="tel:+256779031374">
-            <svg xmlns="http://www.w3.org/2000/svg" class=" h-4" viewBox="0 0 17.517 17.517">
-               <path id="whatsapp"
-                  d="M14.894,34.545A8.683,8.683,0,0,0,1.232,45.021L0,49.517l4.6-1.208a8.654,8.654,0,0,0,4.149,1.056h0a8.625,8.625,0,0,0,6.139-14.819ZM8.755,47.9a7.2,7.2,0,0,1-3.676-1l-.262-.156-2.729.716.727-2.663-.172-.274a7.229,7.229,0,1,1,13.408-3.836A7.3,7.3,0,0,1,8.755,47.9Zm3.957-5.4c-.215-.109-1.283-.633-1.482-.7s-.344-.109-.489.109-.559.7-.688.852-.254.164-.469.055a5.9,5.9,0,0,1-2.952-2.581c-.223-.383.223-.356.637-1.185a.4.4,0,0,0-.02-.379c-.055-.109-.489-1.177-.669-1.611s-.356-.364-.489-.371-.27-.008-.414-.008a.8.8,0,0,0-.579.27,2.437,2.437,0,0,0-.759,1.81A4.249,4.249,0,0,0,5.224,41a9.692,9.692,0,0,0,3.707,3.277,4.244,4.244,0,0,0,2.6.544A2.222,2.222,0,0,0,13,43.789a1.814,1.814,0,0,0,.125-1.032C13.072,42.659,12.927,42.6,12.712,42.5Z"
-                  transform="translate(0 -32)" />
-            </svg>
-            <span>+256 779 031 374</span>
-         </a>
-         <a class="flex gap-2 items-center" href="mailto:info@conkaras.com">
-            <svg xmlns="http://www.w3.org/2000/svg" class=" w-4" viewBox="0 0 15.764 11.823">
-               <path id="envelope"
-                  d="M0,65.97A1.97,1.97,0,0,1,1.97,64H13.793a1.971,1.971,0,0,1,1.97,1.97v7.882a1.972,1.972,0,0,1-1.97,1.97H1.97A1.971,1.971,0,0,1,0,73.852Zm1.478,0v.68l5.311,4.36a1.718,1.718,0,0,0,2.186,0l5.311-4.36v-.708a.513.513,0,0,0-.493-.493H1.97a.512.512,0,0,0-.493.493Zm0,2.592v5.289a.493.493,0,0,0,.493.493H13.793a.494.494,0,0,0,.493-.493V68.563l-4.372,3.59a3.241,3.241,0,0,1-4.092,0Z"
-                  transform="translate(0 -64)" />
-            </svg>
-            <span>info@conkaras.com</span>
-         </a>
-      </div>
-   </div>
-   <nav class="">
-      <div class="container mx-auto flex justify-between">
-         <a class="navbar-brand sm:-translate-y-8" href="/">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-20" viewBox="0 0 144.321 159.089">
-               <g id="logo-nav-square" transform="translate(-161 -67)">
-                  <path id="Path_67" data-name="Path 67" d="M0,0H144.321V159.089H0Z" transform="translate(161 67)"
-                     fill="#fff" />
-                  <g id="Layer_2" data-name="Layer 2" transform="translate(181 74)">
-                     <g id="Layer_1" data-name="Layer 1">
-                        <g id="top" transform="translate(29.806)">
-                           <path id="Path_1" data-name="Path 1"
-                              d="M117.41,49.467l.424-26.91L137.128,4.7l18.278,15.91-.34,25.3Z"
-                              transform="translate(-117.41 -4.7)" fill="none" stroke="#46e317" stroke-miterlimit="10"
-                              stroke-width="3" />
-                           <path id="Path_2" data-name="Path 2" d="M155.74,173Z"
-                              transform="translate(-146.009 -130.274)" fill="none" stroke="#46e317"
-                              stroke-miterlimit="10" stroke-width="3" />
-                           <path id="Path_3" data-name="Path 3" d="M192.24,45.826,192.958,4.7Z"
-                              transform="translate(-173.243 -4.7)" fill="none" stroke="#46e317" stroke-miterlimit="10"
-                              stroke-width="3" />
-                           <path id="Path_4" data-name="Path 4" d="M229.41,68.21l.635-33.51Z"
-                              transform="translate(-200.977 -27.084)" fill="none" stroke="#46e317"
-                              stroke-miterlimit="10" stroke-width="3" />
-                           <path id="Path_5" data-name="Path 5"
-                              d="M160.218,84.035,141.384,73.37l-17.3,10.665,19.8,6.514L159.875,83.1"
-                              transform="translate(-122.387 -55.937)" fill="none" stroke="#46e317"
-                              stroke-miterlimit="10" stroke-width="3" />
-                           <path id="Path_6" data-name="Path 6" d="M119.08,71.8l22.254,7.616L156.487,70.7"
-                              transform="translate(-118.656 -53.945)" fill="none" stroke="#46e317"
-                              stroke-miterlimit="10" stroke-width="3" />
-                           <line id="Line_1" data-name="Line 1" y2="20.182" transform="translate(23.559 20.015)"
-                              fill="none" stroke="#46e317" stroke-miterlimit="10" stroke-width="3" />
-                           <path id="Path_7" data-name="Path 7"
-                              d="M131.78,132.132l-7.7-4.062,17.509-7.7,16.93,5.882-10.409,5.88"
-                              transform="translate(-122.387 -91.005)" fill="none" stroke="#46e317"
-                              stroke-miterlimit="10" stroke-width="3" />
-                        </g>
-                        <g id="bottom" transform="translate(0 39.872)">
-                           <path id="Path_8" data-name="Path 8"
-                              d="M100.973,182.128a7.628,7.628,0,0,1-1.861,3.808c-3.9,4.694-10.053,7.778-12.947,9.139a53.833,53.833,0,0,1-8.207,3.3c-.048-.117,2.98-1.224,6.938-3.554,6.654-3.92,8.847-7.088,9.9-9.139s1.056-3.191.932-3.892c-.4-2.224-2.483-3.592-4.656-4.823a56.693,56.693,0,0,0-12.015-5.247,82.017,82.017,0,0,0-17.347-3.046,77.734,77.734,0,0,0-20.055,1.353,94.52,94.52,0,0,0-15.4,4.91c-2.5,1.043-4.917,2.221-5.808,2.653A56.974,56.974,0,0,0,15,180.521c-2.206,1.371-3.326,2.082-4.232,3.3a7.289,7.289,0,0,0-1.693,4.823c.211,2.262,1.952,3.762,3.3,4.907,5.694,4.823,14.288,4.846,16.247,4.493h0l.109,6.425S23.064,204,17.794,203.2c-1.673-.061-10.256-.533-15.148-7.192a11.677,11.677,0,0,1-2.625-6.265c-.424-6.37,5.907-11.4,10.048-14.6,9.622-7.428,19.416-9.736,26.085-11.234a90.058,90.058,0,0,1,30.274-1.523,80.938,80.938,0,0,1,18.553,4.252,34.744,34.744,0,0,1,10.261,5.268,14.694,14.694,0,0,1,4.887,5.732A7.894,7.894,0,0,1,100.973,182.128Z"
-                              transform="translate(0 -161.758)" fill="#064623" />
-                           <rect id="Rectangle_2" data-name="Rectangle 2" width="4.105" height="9.139"
-                              transform="translate(32.556 17.842)" fill="#064623" />
-                           <rect id="Rectangle_3" data-name="Rectangle 3" width="4.105" height="9.055"
-                              transform="translate(40.702 16.086)" fill="#064623" />
-                           <rect id="Rectangle_4" data-name="Rectangle 4" width="3.978" height="9.096"
-                              transform="translate(31.901 33.348)" fill="#064623" />
-                           <rect id="Rectangle_5" data-name="Rectangle 5" width="4.105" height="9.119"
-                              transform="translate(38.712 33.074)" fill="#064623" />
-                           <path id="Path_9" data-name="Path 9"
-                              d="M277.66,258.978v-4.57s5.268-.3,16.311-8.439C293.971,245.957,293.76,250.387,277.66,258.978Z"
-                              transform="translate(-207.172 -224.591)" fill="#064623" />
-                           <path id="Path_10" data-name="Path 10"
-                              d="M168.793,253.09v4.331H107.35v-4.816h19.309V200.04h23.856v53.05Z"
-                              transform="translate(-80.098 -190.321)" fill="#064623" />
-                        </g>
-                     </g>
-                  </g>
-               </g>
-            </svg>
-         </a>
-         <div class="flex sm:h-full">
-            <menu class="hidden sm:flex flex-1 justify-end gap-4 text-black bg-white bg-opacity-90 py-2 px-4">
+         <div class="grid sm:h-full">
+            <!-- <div id="nav-top-bar" class="container flex gap-8 content-center mx-auto justify-center sm:justify-end text-sm py-2">
+                <a class="flex gap-2 items-center" href="tel:+256756923089">
+                   <svg xmlns="http://www.w3.org/2000/svg" class=" h-4" viewBox="0 0 20.539 20.544">
+                      <path
+                         d="M19.494,14.752,18.607,18.6a1.185,1.185,0,0,1-1.162.924A17.465,17.465,0,0,1,0,2.073,1.185,1.185,0,0,1,.924.911L4.767.025A1.2,1.2,0,0,1,6.132.716L7.906,4.853a1.193,1.193,0,0,1-.342,1.39L5.51,7.892a13.333,13.333,0,0,0,6.082,6.082l1.681-2.052a1.186,1.186,0,0,1,1.391-.342L18.8,13.354A1.3,1.3,0,0,1,19.494,14.752Z"
+                         transform="translate(0.5 0.525)" fill="none" stroke="#000" stroke-width="1" />
+                   </svg>
+                   <span>+256 756 923 089</span>
+                </a>
+                <a class="sm:flex gap-2 items-center hidden" href="tel:+256779031374">
+                   <svg xmlns="http://www.w3.org/2000/svg" class=" h-4" viewBox="0 0 17.517 17.517">
+                      <path id="whatsapp"
+                         d="M14.894,34.545A8.683,8.683,0,0,0,1.232,45.021L0,49.517l4.6-1.208a8.654,8.654,0,0,0,4.149,1.056h0a8.625,8.625,0,0,0,6.139-14.819ZM8.755,47.9a7.2,7.2,0,0,1-3.676-1l-.262-.156-2.729.716.727-2.663-.172-.274a7.229,7.229,0,1,1,13.408-3.836A7.3,7.3,0,0,1,8.755,47.9Zm3.957-5.4c-.215-.109-1.283-.633-1.482-.7s-.344-.109-.489.109-.559.7-.688.852-.254.164-.469.055a5.9,5.9,0,0,1-2.952-2.581c-.223-.383.223-.356.637-1.185a.4.4,0,0,0-.02-.379c-.055-.109-.489-1.177-.669-1.611s-.356-.364-.489-.371-.27-.008-.414-.008a.8.8,0,0,0-.579.27,2.437,2.437,0,0,0-.759,1.81A4.249,4.249,0,0,0,5.224,41a9.692,9.692,0,0,0,3.707,3.277,4.244,4.244,0,0,0,2.6.544A2.222,2.222,0,0,0,13,43.789a1.814,1.814,0,0,0,.125-1.032C13.072,42.659,12.927,42.6,12.712,42.5Z"
+                         transform="translate(0 -32)" />
+                   </svg>
+                   <span>+256 779 031 374</span>
+                </a>
+                <a class="flex gap-2 items-center" href="mailto:info@conkaras.com">
+                   <svg xmlns="http://www.w3.org/2000/svg" class=" w-4" viewBox="0 0 15.764 11.823">
+                      <path id="envelope"
+                         d="M0,65.97A1.97,1.97,0,0,1,1.97,64H13.793a1.971,1.971,0,0,1,1.97,1.97v7.882a1.972,1.972,0,0,1-1.97,1.97H1.97A1.971,1.971,0,0,1,0,73.852Zm1.478,0v.68l5.311,4.36a1.718,1.718,0,0,0,2.186,0l5.311-4.36v-.708a.513.513,0,0,0-.493-.493H1.97a.512.512,0,0,0-.493.493Zm0,2.592v5.289a.493.493,0,0,0,.493.493H13.793a.494.494,0,0,0,.493-.493V68.563l-4.372,3.59a3.241,3.241,0,0,1-4.092,0Z"
+                         transform="translate(0 -64)" />
+                   </svg>
+                   <span>info@conkaras.com</span>
+                </a>
+             </div> -->
+            <menu class="hidden sm:flex flex-1 justify-end gap-4  bg-opacity-90 py-2 px-4 font-semibold text-primary-100">
                <a href="/" class="hidden sm:grid content-center">Home</a>
                <a href="{% url 'about:main-page' %}" class="hidden sm:grid content-center">About</a>
                <a href="{% url 'services:main-page' %}" class="hidden sm:grid content-center">Services</a>
@@ -105,9 +50,9 @@
 </header>
 
 <div id="navSm" class="nav-sm fixed sm:hidden w-screen h-screen bg-primary-100 top-0 left-0 z-30">
-   <div class="container">
-      <div class="text-center mt-4">
-         <svg xmlns="http://www.w3.org/2000/svg" class=" w-40 mx-auto" viewBox="0 0 144.321 148.782">
+   <div class="container h-full grid content-center p-4 overflow-y-auto">
+      <div class="text-center">
+         <svg xmlns="http://www.w3.org/2000/svg" class=" w-28 mx-auto" viewBox="0 0 144.321 148.782">
             <g id="logo-nav-square" transform="translate(-161 -57)">
                <g id="Group_20" data-name="Group 20">
                   <path id="Path_67" data-name="Path 67" d="M0,0H144.321V148.782H0Z" transform="translate(161 57)"
@@ -200,19 +145,18 @@
             </li>
          </ul>
       </div>
-      <menu class="grid font-medium px-8 text-xl text-white gap-4 mt-8">
+      <menu class="grid grid-cols-2 gap-4 text-lg font-medium text-white px-8 mt-8">
          <a href="/" class="">Home</a>
          <a href="{% url 'about:main-page' %}" class="">About</a>
          <a href="{% url 'services:main-page' %}" class="">Services</a>
          <a href="{% url 'projects:list' %}" class="">Our Work</a>
          <a href="{% url 'contact:main-page' %}" class="">Contact Us</a>
       </menu>
-
    </div>
 </div>
 
-<button id="navToggler" class="bg-primary-500 p-4 rounded-xl flex align-middle z-30 fixed right-8 bottom-8 sm:hidden" title="Navigation toggle">
-   <div id="hamburger">
+<button id="navToggler" class="outline-primary-500 outline-1 outline bg-white px-4 py-2 rounded-xl flex align-middle z-30 fixed right-8 bottom-8 sm:hidden" title="Navigation toggle">
+   <div id="hamburger" class="scale-75">
       <span class="line_a"></span>
       <span class="line_b"></span>
       <span class="line_c"></span>
