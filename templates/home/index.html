@@ -58,7 +58,7 @@
 <section class="container mx-auto bg-primary-500 text-white py-8 lg:py-16 sm:translate-y-[-10%] lg:-translate-y-[25%] slide-in-left">
     <div class="lg:px-12 px-6 flex md:grid md:grid-cols-3 flex-col justify-center md:justify-between">
         <h2
-            class="text-black text-xl text-center md:text-left md:col-span-2 mb-4 lg:mb-0 fade-in">
+            class="text-black text-lg text-center md:text-left md:col-span-2 mb-4 lg:mb-0 fade-in">
             We are a team of dedicated professionals committed to transforming ideas into reality. Established in 2017, our journey has been one of growth, innovation, and excellence in the fields of construction, engineering, and interior design.
         </h2>
         <button
@@ -77,7 +77,7 @@
                     <img src="{% static 'images/mechanical.webp' %}" class="object-cover w-full scale-105 group-hover:scale-100 transition-all duration-1000" alt="">
                     <!-- <div class="absolute top-0 left-0 bottom-0 right-0 bg-primary-500 bg-opacity-50 transition-all group-hover:bg-opacity-0"></div> -->
                 </figure>
-                <div class="text-left text-xl grid content-center">
+                <div class="text-left grid content-center">
                     <h3 class="fade-in font-extrabold text-primary-100 mt-2 mb-1 text-3xl">Mechanical Solutions</h3>
                     <p class="fade-in text-2xl font-extrabold mb-4 text-outline">Elevating Comfort and Efficiency</p>
                     <p class="fade-in max-w-2xl">
@@ -94,7 +94,7 @@
                     <img src="{% static 'images/electrical2.webp' %}" class="object-cover w-full scale-105 group-hover:scale-100 transition-all duration-1000" alt="">
                     <!-- <div class="absolute top-0 left-0 bottom-0 right-0 bg-primary-500 bg-opacity-50 transition-all group-hover:bg-opacity-0"></div> -->
                 </figure>
-                <div class="text-left text-xl grid content-center justify-end">
+                <div class="text-left grid content-center justify-end">
                     <h3 class="fade-in font-extrabold text-primary-100 mt-2 mb-1 text-3xl">Electrical Expertise</h3>
                     <p class="fade-in text-2xl font-extrabold mb-4 text-outline">Powering Your Success</p>
                     <p class="fade-in max-w-2xl">
@@ -111,7 +111,7 @@
                     <img src="{% static 'images/civil2.webp' %}" class="object-cover w-full scale-105 group-hover:scale-100 transition-all duration-1000" alt="">
                     <!-- <div class="absolute top-0 left-0 bottom-0 right-0 bg-primary-500 bg-opacity-50 transition-all group-hover:bg-opacity-0"></div> -->
                 </figure>
-                <div class="text-left text-xl grid content-center">
+                <div class="text-left grid content-center">
                     <h3 class="fade-in font-extrabold text-primary-100 mt-2 mb-1 text-3xl">Civil and Building Excellence</h3>
                     <p class="fade-in text-2xl font-extrabold mb-4 text-outline">Creating Foundations for Success</p>
                     <p class="fade-in max-w-2xl">
@@ -128,7 +128,7 @@
                     <img src="{% static 'images/interior2.webp' %}" class="object-cover w-full scale-105 group-hover:scale-100 transition-all duration-1000" alt="">
                     <!-- <div class="absolute top-0 left-0 bottom-0 right-0 bg-primary-500 bg-opacity-50 transition-all group-hover:bg-opacity-0"></div> -->
                 </figure>
-                <div class="text-left text-xl grid content-center justify-end">
+                <div class="text-left grid content-center justify-end">
                     <h3 class="fade-in font-extrabold text-primary-100 mt-2 mb-1 text-3xl">Interior Elegance and Fit-outs</h3>
                     <p class="fade-in text-2xl font-extrabold mb-4 text-outline">Where Design Meets Functionality</p>
                     <p class="fade-in max-w-2xl">
@@ -149,7 +149,7 @@
             <h2 class="pop-in fade-in text-3xl text-center sm:text-left uppercase text-primary-100 font-bold">
                 Why choose us for your next project !
             </h2>
-            <p class="text-grey-600 fade-in text-lg mt-4 mb-8">
+            <p class="text-grey-600 fade-in mt-4 mb-8">
                 When it comes to construction, engineering, and interior design, Conkaras Uganda Limited stands out for a multitude of reasons. Our unwavering commitment to excellence, combined with our innovative approach, makes us the ideal partner for your projects.
             </p>
             <ul class="grid gap-4">
@@ -202,7 +202,7 @@
             <article class="slide-in-top flex flex-col p-2">
                 <img src="{{ p.project.thumbnail.url }}" alt="" class="object-cover aspect-video rounded-md" />
                 <div class="flex-1 flex flex-col">
-                    <h3 class="text-xl font-semibold my-2">{{ p.project.name }}</h3>
+                    <h3 class= font-semibold my-2">{{ p.project.name }}</h3>
                     <p class="mb-3">{{ p.project.short_description }}</p>
                     <button class="text-primary-100 px-6 py-2 outline rounded-sm mt-auto w-fit">
                         <a href="{% url 'projects:detail' p.project.pk %}"><i class="fas fa-circle-arrow-right mr-4"></i>View Project 
@@ -220,7 +220,7 @@
         <h2 class="text-4xl uppercase font-bold fade-in">
             Explore Possibilities with Conkaras
         </h2>
-        <p class="my-8 max-w-4xl mx-auto text-lg fade-in">
+        <p class="my-8 max-w-4xl mx-auto fade-in">
             Whether you're envisioning a grand construction project or seeking innovative interior design solutions,
             Conkaras Uganda Limited is your partner of choice. Join us in creating a future built on Structured
             Ingenuity. Contact us today to embark on a journey of excellence.

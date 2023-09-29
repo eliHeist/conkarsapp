@@ -22,19 +22,19 @@
    </div>
 </section>
 
-<main id="project" class="container mx-auto py-8">
+<main id="project" class=" max-w-3xl mx-auto py-8">
    
-   <div class="flex flex-col sm:flex-row mb-4">
-      <img src="{{ project.thumbnail.url }}" alt="Project 1" class="sm:w-1/2 sm:mr-4 aspect-video rounded-lg shadow-xl">
-      <div class=" sm:flex-col-reverse sm:flex sm:mb-auto">
-         <ul class="flex flex-wrap gap-2 my-2">
-            
-            {% for cat in project.categories.all %}
-               <li class="bg-secondary-100 rounded-full px-3 py-1 mr-2 font-semibold text-grey-800 text-xs">{{ cat.name }}</li>
-            {% endfor %}
-               
-         </ul>
-         <h2 class="text-3xl font-bold mt-4 sm:mt-0 sm:text-4xl text-primary-100">{{ project.name }}</h2>
+   <div class="grid justify-center mb-4">
+      <img src="{{ project.thumbnail.url }}" alt="Project 1" class="aspect-video object-cover w-full rounded-lg shadow-xl">
+      <div class="grid">
+          <h2 class="text-3xl font-bold mt-4 sm:mt-0 sm:text-4xl text-primary-100">{{ project.name }}</h2>
+          <ul class="flex flex-wrap gap-2 my-2">
+             
+             {% for cat in project.categories.all %}
+                <li class="bg-secondary-100 rounded-full px-3 py-1 mr-2 font-semibold text-grey-800 text-xs">{{ cat.name }}</li>
+             {% endfor %}
+                
+          </ul>
       </div>
    </div>
    <!-- <p class="text-xl font-bold mb-4">Description:</p> -->

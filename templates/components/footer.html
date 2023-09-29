@@ -4,7 +4,7 @@
 <footer class=" bg-dark-200 text-lead pt-12">
    <!-- contact info -->
    <div class="container">
-      <div class="bg-black px-6 sm:px-8 py-4 grid grid-cols-1 lg:grid-cols-3 text- justify-around">
+      <div class="bg-black px-6 sm:px-8 py-4 grid grid-cols-1 lg:grid-cols-3 justify-around">
          <div class="flex gap-4 h-full py-4">
             <div class="icon aspect-square w-16 bg-grey-900 rounded-lg grid place-content-center">
                <svg xmlns="http://www.w3.org/2000/svg" class="my-auto h-10" viewBox="0 0 67.475 88.785">
@@ -36,7 +36,7 @@
              </div>
          </div>
          <div class="flex gap-4 h-full py-4">
-            <div class="icon aspect-square w-16 bg-grey-900 rounded-lg grid place-content-center">
+            <div class="icon aspect-square w-16 h-16 bg-grey-900 rounded-lg grid place-content-center">
                <svg xmlns="http://www.w3.org/2000/svg" class="my-auto h-12" viewBox="0 0 106.763 108.267">
                   <g id="phone-volume" transform="translate(2.215 2.229)">
                      <path id="phone-volume-2" data-name="phone-volume"
@@ -47,9 +47,9 @@
             </div>
             <div class="text grid content-start text-white my-auto">
                 <p class="font-semibold">Call us:</p>
-                <p class="flex gap-4">
+                <p class="flex flex-col md:flex-row md:gap-4">
                     <a href="tel:+256756923089">+256 756 923 089</a>
-                    <span>|</span>
+                    <span class="hidden md:flex">|</span>
                     <a href="tel:+256779031374">+256 779 031 374</a>
                 </p>
              </div>
@@ -116,8 +116,8 @@
          </svg>
       </div>
       <!-- quick links -->
-      <div class="quick-links text-lg">
-         <h3 class="title text-xl text-white font-semibold py-1 mb-4">Quick Links</h3>
+      <div class="quick-links">
+         <h3 class="title text-white font-semibold py-1 mb-4">Quick Links</h3>
          <ul class="grid gap-3">
             <li>-<a href="{% url 'about:main-page' %}" class="ml-1">About Us</a></li>
             <li>-<a href="{% url 'posts:list' %}" class="ml-1">News and Articles</a></li>
@@ -126,8 +126,8 @@
          </ul>
       </div>
       <!-- Our Services -->
-      <div class="services text-lg">
-         <h3 class="title text-xl text-white font-semibold py-1 mb-4">Our Services</h3>
+      <div class="services">
+         <h3 class="title text-white font-semibold py-1 mb-4">Our Services</h3>
          <ul class="grid gap-3">
             <li>-<a href="{% url 'services:main-page' %}/#building" class="ml-1">Construction</a></li>
             <li>-<a href="{% url 'services:main-page' %}/#interior" class="ml-1">Interior Design</a></li>
@@ -136,8 +136,8 @@
          </ul>
       </div>
       <!-- Newsletter -->
-      <div class="text-lg col-span-2 sm:col-span-1 lg:col-span-2 xl:col-span-1">
-         <h3 class="title text-xl text-white font-semibold py-1 mb-4">Newsletter</h3>
+      <div class="col-span-2 sm:col-span-1 lg:col-span-2 xl:col-span-1">
+         <h3 class="title text-white font-semibold py-1 mb-4">Newsletter</h3>
          <p>Be the first to know what's new and our offers</p>
          <!-- Form ====================================== -->
          <form method="POST" class="grid gap-4 accent-primary-500 mt-4"
